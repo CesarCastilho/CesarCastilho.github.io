@@ -1,0 +1,158 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+}
+
+/* --- BARRA LATERAL --- */
+.sidebar {
+    width: 260px;
+    background-color: #513b8f; /* Roxo da referência */
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.profile-area {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    object-fit: cover;
+}
+
+.sidebar h2 {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+/* Ícones de Redes Sociais */
+.social-icons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Menu de Navegação */
+.menu {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu li {
+    margin-bottom: 8px;
+}
+
+.menu a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.menu a:hover, .menu a.active {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- CONTEÚDO PRINCIPAL --- */
+.main-content {
+    margin-left: 260px; /* Abandona o espaço da sidebar fixa */
+    padding: 60px 80px;
+    width: calc(100% - 260px);
+}
+
+/* Frase de Destaque (Hero) */
+.hero-section {
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.hero-section h1 {
+    font-size: 2.3rem;
+    font-weight: 600;
+    color: #00bcd4; /* Ciano chamativo */
+    line-height: 1.4;
+}
+
+.hero-section .highlight {
+    color: #00e5ff;
+    border-bottom: 2px solid #00e5ff;
+    padding-bottom: 2px;
+}
+
+/* Seções de Texto */
+.content-section {
+    margin-top: 40px;
+}
+
+.content-section h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.line-dec {
+    width: 60px;
+    height: 2px;
+    background-color: #ffffff;
+    margin-bottom: 25px;
+}
+
+.content-section p {
+    font-size: 1.1rem;
+    line-net: 1.6;
+    color: #cccccc;
+}
