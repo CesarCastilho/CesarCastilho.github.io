@@ -7,8 +7,8 @@
 }
 
 body {
-    background-color: #1a1a1a;
-    color: #ffffff;
+    background-color: #0f172a;
+    color: #f8fafc;
 }
 
 .container {
@@ -18,7 +18,7 @@ body {
 /* --- BARRA LATERAL --- */
 .sidebar {
     width: 260px;
-    background-color: #513b8f; /* Roxo da referência */
+    background-color: #1e293b;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -59,7 +59,7 @@ body {
 
 .social-icons a {
     color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(255,255,255,.08);
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -71,7 +71,8 @@ body {
 }
 
 .social-icons a:hover {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: #38bdf8;
+    color: #0f172a;
 }
 
 /* Menu de Navegação */
@@ -89,7 +90,7 @@ body {
 }
 
 .menu a {
-    color: rgba(255, 255, 255, 0.7);
+    color: #cbd5e1;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -102,7 +103,7 @@ body {
 
 .menu a:hover, .menu a.active {
     color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(56,189,248,.15);
 }
 
 /* --- CONTEÚDO PRINCIPAL --- */
@@ -137,13 +138,13 @@ body {
     max-width: 1000px;
     font-size: 2.3rem;
     font-weight: 600;
-    color: #00bcd4;
+    color: #38bdf8;
     line-height: 1.4;
 }
 
 .hero-section .highlight {
-    color: #00e5ff;
-    border-bottom: 2px solid #00e5ff;
+    color: #7dd3fc;
+    border-bottom: 2px solid #7dd3fc;
     padding-bottom: 2px;
 }
 
@@ -161,12 +162,12 @@ body {
 .line-dec {
     width: 60px;
     height: 2px;
-    background-color: #ffffff;
+    background-color: #38bdf8;
     margin-bottom: 25px;
 }
 
 .content-section p {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #cccccc;
+    color: #cbd5e1;
 }
