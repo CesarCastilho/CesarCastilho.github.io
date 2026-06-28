@@ -21,8 +21,8 @@ for (let i = 0; i < N; i++) {
     particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.8,
-        vy: (Math.random() - 0.5) * 0.8,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5,
         r: 4 + Math.random() * 2,
         state: randomState(i),
         infectedTime: 0
@@ -103,8 +103,8 @@ function draw() {
                 ctx.beginPath();
                 ctx.moveTo(a.x, a.y);
                 ctx.lineTo(b.x, b.y);
-                ctx.strokeStyle = "rgba(125,211,252,0.45)";
-                ctx.lineWidth = 2;
+                ctx.strokeStyle = "rgba(180,180,255,0.10)";
+                ctx.lineWidth = 1;
                 ctx.stroke();
             }
         }
