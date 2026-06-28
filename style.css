@@ -209,13 +209,6 @@ body {
     }
 }
 .hero-title {
-    color: red;
-    font-size: 2rem;
-    font-weight: 500;
-}
-/* ===== HERO TITLE ===== */
-
-h1.hero-title {
     color: #e2e8f0;
     font-size: 2rem;
     font-weight: 400;
