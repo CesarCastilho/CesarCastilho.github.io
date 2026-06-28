@@ -2,7 +2,7 @@ const canvas = document.getElementById("epidemicCanvas");
 const ctx = canvas.getContext("2d");
 
 let particles = [];
-const N = 16;
+const N = 22;
 
 function resizeCanvas() {
     canvas.width = canvas.offsetWidth;
@@ -103,8 +103,8 @@ function draw() {
                 ctx.beginPath();
                 ctx.moveTo(a.x, a.y);
                 ctx.lineTo(b.x, b.y);
-                ctx.strokeStyle = "rgba(180, 180, 255, 0.10)";
-                ctx.lineWidth = 1;
+                ctx.strokeStyle = "rgba(125,211,252,0.45)";
+                ctx.lineWidth = 2;
                 ctx.stroke();
             }
         }
