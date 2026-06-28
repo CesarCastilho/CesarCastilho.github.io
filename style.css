@@ -207,4 +207,7 @@ body {
     color: red !important;
     font-size: 3rem !important;
 }
+    h1.hero-title {
+    color: red !important;
+}
 }
