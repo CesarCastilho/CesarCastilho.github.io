@@ -56,12 +56,23 @@ function createNetwork() {
 }
 
 function updateNodeCoordinates(time) {
-    for (const n of nodes) {
-        const wiggle = 1.2;
 
-        n.x = n.x0 * canvas.width + wiggle * Math.sin(time * 0.0008 + n.phase);
-        n.y = n.y0 * canvas.height + wiggle * Math.cos(time * 0.0009 + n.phase);
+    for (const n of nodes) {
+
+        // pequena oscilação lenta
+        const ax = 2.5;
+        const ay = 2.5;
+
+        n.x =
+            n.x0 * canvas.width +
+            ax * Math.sin(0.00045 * time + n.phase);
+
+        n.y =
+            n.y0 * canvas.height +
+            ay * Math.cos(0.00038 * time + 1.3 * n.phase);
+
     }
+
 }
 
 function updateEpidemic() {
