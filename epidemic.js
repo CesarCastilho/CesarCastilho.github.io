@@ -92,7 +92,22 @@ function update() {
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+// Desenha as linhas do grafo
+for (let i = 0; i < particles.length; i++) {
+    for (let j = i + 1; j < particles.length; j++) {
+        const a = particles[i];
+        const b = particles[j];
 
+        ctx.beginPath();
+        ctx.moveTo(a.x, a.y);
+        ctx.lineTo(b.x, b.y);
+
+        ctx.strokeStyle = "rgba(125, 211, 252, 0.35)";
+        ctx.lineWidth = 1.5;
+
+        ctx.stroke();
+    }
+}
     for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
             const a = particles[i];
