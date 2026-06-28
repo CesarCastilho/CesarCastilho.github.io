@@ -99,14 +99,18 @@ function draw() {
             const b = particles[j];
             const d = distance(a, b);
 
-            if (d < 120 && Math.random() < 0.02){
-                ctx.beginPath();
-                ctx.moveTo(a.x, a.y);
-                ctx.lineTo(b.x, b.y);
-                ctx.strokeStyle = "rgba(180,180,255,0.10)";
-                ctx.lineWidth = 1;
-                ctx.stroke();
-            }
+            if (d < 140) {
+    const alpha = 1 - d / 140;
+
+    ctx.beginPath();
+    ctx.moveTo(a.x, a.y);
+    ctx.lineTo(b.x, b.y);
+
+    ctx.strokeStyle = `rgba(125, 211, 252, ${0.35 + 0.35 * alpha})`;
+    ctx.lineWidth = 1.5 + 2 * alpha;
+
+    ctx.stroke();
+}
         }
     }
 
