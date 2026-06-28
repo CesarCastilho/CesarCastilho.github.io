@@ -208,3 +208,8 @@ body {
         font-size: 1.6rem;
     }
 }
+.hero-title {
+    color: red;
+    font-size: 2rem;
+    font-weight: 500;
+}
