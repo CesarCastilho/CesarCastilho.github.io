@@ -1,18 +1,22 @@
+/* =========================
+   Base
+========================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {
     background-color: #0f172a;
-    color: #f8fafc;
+    color: #e2e8f0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
+
+/* =========================
+   Layout
+========================= */
 
 .container {
     display: flex;
@@ -20,21 +24,22 @@ body {
 
 .sidebar {
     width: 260px;
-    background-color: #1e293b;
     height: 100vh;
     position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: #1e293b;
     padding: 40px 20px;
+    text-align: center;
 }
 
-.profile-area {
-    text-align: center;
-    margin-bottom: 30px;
+.main-content {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    padding: 60px 80px;
 }
+
+/* =========================
+   Sidebar
+========================= */
 
 .avatar {
     width: 115px;
@@ -45,10 +50,9 @@ body {
 }
 
 .sidebar h2 {
+    margin-top: 15px;
     color: #ffffff;
     font-size: 1.4rem;
-    margin-top: 15px;
-    font-weight: 600;
 }
 
 .social-icons {
@@ -59,16 +63,15 @@ body {
 }
 
 .social-icons a {
-    color: #ffffff;
-    background-color: rgba(255,255,255,.08);
     width: 35px;
     height: 35px;
     border-radius: 50%;
+    background-color: rgba(255,255,255,0.08);
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    transition: 0.3s;
 }
 
 .social-icons a:hover {
@@ -76,9 +79,12 @@ body {
     color: #0f172a;
 }
 
+/* =========================
+   Menu
+========================= */
+
 .menu {
-    width: 100%;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .menu ul {
@@ -96,50 +102,29 @@ body {
     align-items: center;
     gap: 15px;
     padding: 12px 15px;
-    font-size: 1rem;
     border-radius: 4px;
-    transition: 0.3s;
 }
 
 .menu a:hover,
 .menu a.active {
     color: #ffffff;
-    background-color: rgba(56,189,248,.15);
+    background-color: rgba(56,189,248,0.15);
 }
 
-.main-content {
-    margin-left: 260px;
-    padding: 60px 80px;
-    width: calc(100% - 260px);
-}
+/* =========================
+   Hero
+========================= */
 
 .hero-section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     margin-bottom: 50px;
 }
 
-.hero-title {
-    font-size: 2rem;
-    color: #e2e8f0;
-    font-weight: 500;
-    margin-bottom: 12px;
-}
-
-.subtitle {
-    font-size: 1rem;
-    color: #94a3b8;
-    letter-spacing: 0.5px;
-}
-
 .animation-box {
-    position: relative;
     width: 100%;
     height: 180px;
+    border-radius: 14px;
     overflow: hidden;
     margin-bottom: 32px;
-    border-radius: 14px;
     background: rgba(15, 23, 42, 0.35);
     border: 1px solid rgba(125, 211, 252, 0.12);
 }
@@ -150,9 +135,27 @@ body {
     height: 100%;
 }
 
+h1.hero-title {
+    color: #e2e8f0;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #94a3b8;
+    font-size: 1rem;
+    letter-spacing: 0.4px;
+}
+
+/* =========================
+   Sections
+========================= */
+
 .content-section {
-    margin-top: 45px;
     max-width: 1000px;
+    margin-top: 45px;
 }
 
 .content-section h2 {
@@ -178,11 +181,11 @@ body {
 .content-section a {
     color: #7dd3fc;
 }
-.hero-title {
-    color: red;
-    font-size: 2rem;
-    font-weight: 500;
-}
+
+/* =========================
+   Mobile
+========================= */
+
 @media (max-width: 850px) {
     .container {
         flex-direction: column;
@@ -200,24 +203,11 @@ body {
         padding: 40px 25px;
     }
 
+    h1.hero-title {
+        font-size: 1.6rem;
+    }
+
     .animation-box {
         height: 150px;
     }
-
-    .hero-title {
-        font-size: 1.6rem;
-    }
-}
-h1.hero-title {
-    color: #e2e8f0;
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: 1.4;
-    margin-bottom: 10px;
-}
-
-.subtitle {
-    color: #94a3b8;
-    font-size: 1rem;
-    letter-spacing: 0.4px;
 }
