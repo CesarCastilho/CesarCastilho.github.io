@@ -9,6 +9,30 @@ const N = 24;
 const NEIGHBORS = 3;
 
 function resizeCanvas() {
+    canvas.width = canvas.clientWidth;
+    canvas.height = canvas.clientHeight;
+}
+
+window.addEventListener("resize", () => {
+    resizeCanvas();
+    initializeParticles();
+    initializeEdges();
+});
+
+resizeCanvas();
+
+
+const canvas = document.getElementById("epidemicCanvas");
+const ctx = canvas.getContext("2d");
+
+let particles = [];
+let edges = [];
+let pulses = [];
+
+const N = 24;
+const NEIGHBORS = 3;
+
+function resizeCanvas() {
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
 }
