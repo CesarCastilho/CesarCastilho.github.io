@@ -178,7 +178,11 @@ body {
 .content-section a {
     color: #7dd3fc;
 }
-
+.hero-title {
+    color: red;
+    font-size: 2rem;
+    font-weight: 500;
+}
 @media (max-width: 850px) {
     .container {
         flex-direction: column;
