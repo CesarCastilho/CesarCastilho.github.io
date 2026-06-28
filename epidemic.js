@@ -56,17 +56,10 @@ function createNetwork() {
 }
 
 function updateNodeCoordinates(time) {
-
     for (const n of nodes) {
-
-        // cidades praticamente fixas
         n.x = n.x0 * canvas.width;
         n.y = n.y0 * canvas.height;
-
     }
-
-}
-
 }
 
 function updateEpidemic() {
@@ -153,69 +146,30 @@ function drawPulses() {
 }
 
 function drawNodes(time) {
-
     for (const n of nodes) {
-
-        // Halo pulsante dos infectados
         if (n.state === "I") {
-
-            const halo =
-                n.radius +
-                4 +
-                2 * Math.sin(time * 0.004);
+            const halo = n.radius + 4 + 2 * Math.sin(time * 0.004);
 
             ctx.beginPath();
-            ctx.arc(
-                n.x,
-                n.y,
-                halo,
-                0,
-                2 * Math.PI
-            );
-
-            ctx.strokeStyle =
-                "rgba(248,113,113,0.18)";
-
+            ctx.arc(n.x, n.y, halo, 0, 2 * Math.PI);
+            ctx.strokeStyle = "rgba(248,113,113,0.18)";
             ctx.lineWidth = 1.2;
-
             ctx.stroke();
         }
 
-        // Cidade
-
         ctx.beginPath();
-        ctx.arc(
-            n.x,
-            n.y,
-            n.radius,
-            0,
-            2 * Math.PI
-        );
-
+        ctx.arc(n.x, n.y, n.radius, 0, 2 * Math.PI);
         ctx.fillStyle = STATES[n.state];
         ctx.fill();
 
-        // contorno discreto
-
         ctx.beginPath();
-        ctx.arc(
-            n.x,
-            n.y,
-            n.radius + 1,
-            0,
-            2 * Math.PI
-        );
-
-        ctx.strokeStyle =
-            "rgba(255,255,255,0.12)";
-
+        ctx.arc(n.x, n.y, n.radius + 1, 0, 2 * Math.PI);
+        ctx.strokeStyle = "rgba(255,255,255,0.12)";
         ctx.lineWidth = 0.8;
-
         ctx.stroke();
-
     }
-
 }
+
 function drawLegend() {
     const y = canvas.height - 16;
 
@@ -247,7 +201,7 @@ function animate(time) {
 
     drawEdges();
     drawPulses();
-    drawNodes();
+    drawNodes(time);
     drawLegend();
 
     requestAnimationFrame(animate);
