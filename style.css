@@ -1,182 +1,357 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ===========================================================
+   César Castilho
+   Personal Academic Website
+   =========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
 }
 
-body {
-    background: #0f172a;
-    color: #cbd5e1;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+html{
+    scroll-behavior:smooth;
 }
 
-.container {
-    display: flex;
+/* ===========================================================
+   COLORS
+   =========================================================== */
+
+body{
+
+    background:#0f172a;
+
+    color:#CBD5E1;
+
 }
 
-.sidebar {
-    width: 260px;
-    height: 100vh;
-    position: fixed;
-    background: #1e293b;
-    padding: 40px 20px;
-    text-align: center;
+.container{
+    display:flex;
 }
 
-.avatar {
-    width: 115px;
-    height: 115px;
-    border-radius: 50%;
-    border: 3px solid #38bdf8;
-    object-fit: cover;
+/* ===========================================================
+   SIDEBAR
+   =========================================================== */
+
+.sidebar{
+
+    width:260px;
+    height:100vh;
+
+    position:fixed;
+
+    left:0;
+    top:0;
+
+    background:#1e293b;
+
+    padding:40px 20px;
+
+    text-align:center;
+
 }
 
-.sidebar h2 {
-    margin-top: 15px;
-    color: white;
-    font-size: 1.4rem;
+.avatar{
+
+    width:115px;
+    height:115px;
+
+    border-radius:50%;
+
+    border:3px solid #38BDF8;
+
+    object-fit:cover;
+
 }
 
-.social-icons {
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+.sidebar h2{
+
+    margin-top:15px;
+
+    color:#FFFFFF;
+
+    font-size:1.45rem;
+
+    font-weight:600;
+
 }
 
-.social-icons a {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    background: rgba(255,255,255,.08);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
+.social-icons{
+
+    margin-top:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:10px;
+
 }
 
-.social-icons a:hover {
-    background: #38bdf8;
-    color: #0f172a;
+.social-icons a{
+
+    width:36px;
+    height:36px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-decoration:none;
+
+    border-radius:50%;
+
+    color:white;
+
+    background:rgba(255,255,255,.08);
+
+    transition:.3s;
+
 }
 
-.menu {
-    margin-top: 30px;
+.social-icons a:hover{
+
+    background:#38BDF8;
+
+    color:#0F172A;
+
 }
 
-.menu ul {
-    list-style: none;
+/* ===========================================================
+   MENU
+   =========================================================== */
+
+.menu{
+
+    margin-top:35px;
+
 }
 
-.menu li {
-    margin-bottom: 8px;
+.menu ul{
+
+    list-style:none;
+
 }
 
-.menu a {
-    color: #cbd5e1;
-    text-decoration: none;
-    display: flex;
-    gap: 15px;
-    padding: 12px 15px;
-    border-radius: 4px;
+.menu li{
+
+    margin-bottom:8px;
+
+}
+
+.menu a{
+
+    color:#CBD5E1;
+
+    text-decoration:none;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:12px 15px;
+
+    border-radius:5px;
+
+    transition:.25s;
+
 }
 
 .menu a:hover,
-.menu a.active {
-    color: white;
-    background: rgba(56,189,248,.15);
+.menu a.active{
+
+    color:white;
+
+    background:rgba(56,189,248,.15);
+
 }
 
-.main-content {
-    margin-left: 260px;
-    width: calc(100% - 260px);
-    padding: 60px 80px;
+/* ===========================================================
+   MAIN
+   =========================================================== */
+
+.main-content{
+
+    margin-left:260px;
+
+    width:calc(100% - 260px);
+
+    padding:60px 80px;
+
 }
 
-.animation-box {
-    width: 100%;
-    height: 180px;
-    border-radius: 14px;
-    overflow: hidden;
-    margin-bottom: 32px;
-    background: rgba(15,23,42,.35);
-    border: 1px solid rgba(125,211,252,.12);
+/* ===========================================================
+   HERO
+   =========================================================== */
+
+.hero-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin-bottom:55px;
+
 }
 
-#epidemicCanvas {
-    display: block;
-    width: 100%;
-    height: 100%;
+.animation-box{
+
+    width:100%;
+
+    height:180px;
+
+    margin-bottom:30px;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    background:rgba(15,23,42,.35);
+
+    border:1px solid rgba(125,211,252,.12);
+
 }
 
-/* MUDE A COR DO TÍTULO AQUI */
-.hero-title {
-    color: #38bdf8;
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: 1.4;
-    margin-bottom: 10px;
+#epidemicCanvas{
+
+    width:100%;
+    height:100%;
+
+    display:block;
+
 }
 
-.subtitle {
-    color: #94a3b8;
-    font-size: 1rem;
-    letter-spacing: .4px;
+/* ===========================================================
+   TITLE
+   =========================================================== */
+
+.hero-title{
+
+    font-size:2rem;
+
+    font-weight:300;
+
+    line-height:1.35;
+
+    color:#F1F5F9;
+
+    margin-bottom:10px;
+
 }
 
-.content-section {
-    max-width: 1000px;
-    margin-top: 45px;
+.subtitle{
+
+    font-size:1rem;
+
+    color:#94A3B8;
+
+    letter-spacing:.4px;
+
 }
 
-.content-section h2 {
-    font-size: 2rem;
-    font-weight: 500;
-    color: #e2e8f0;
-    margin-bottom: 10px;
+/* ===========================================================
+   CONTENT
+   =========================================================== */
+
+.content-section{
+
+    margin-top:45px;
+
+    max-width:1000px;
+
 }
 
-.line-dec {
-    width: 60px;
-    height: 2px;
-    background: #38bdf8;
-    margin-bottom: 25px;
+.content-section h2{
+
+    color:#F1F5F9;
+
+    font-size:2rem;
+
+    font-weight:500;
+
+    margin-bottom:10px;
+
 }
 
-.content-section p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #cbd5e1;
-    margin-bottom: 18px;
+.line-dec{
+
+    width:60px;
+
+    height:2px;
+
+    background:#38BDF8;
+
+    margin-bottom:25px;
+
 }
 
-.content-section a {
-    color: #7dd3fc;
+.content-section p{
+
+    color:#CBD5E1;
+
+    font-size:1.1rem;
+
+    line-height:1.7;
+
+    margin-bottom:18px;
+
 }
 
-@media (max-width: 850px) {
-    .container {
-        flex-direction: column;
-    }
+.content-section a{
 
-    .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-    }
+    color:#7DD3FC;
 
-    .main-content {
-        margin-left: 0;
-        width: 100%;
-        padding: 40px 25px;
-    }
+    text-decoration:none;
 
-    .hero-title {
-        font-size: 1.6rem;
-    }
+}
 
-    .animation-box {
-        height: 150px;
-    }
+.content-section a:hover{
+
+    color:white;
+
+}
+
+/* ===========================================================
+   MOBILE
+   =========================================================== */
+
+@media (max-width:850px){
+
+.sidebar{
+
+    position:relative;
+
+    width:100%;
+
+    height:auto;
+
+}
+
+.main-content{
+
+    margin-left:0;
+
+    width:100%;
+
+    padding:40px 25px;
+
+}
+
+.hero-title{
+
+    font-size:1.6rem;
+
+}
+
+.animation-box{
+
+    height:150px;
+
+}
+
 }
