@@ -119,7 +119,18 @@ body {
     align-items: flex-start;
     margin-bottom: 50px;
 }
+.hero-title {
+    font-size: 2.0rem;      /* tamanho */
+    color: #f8fafc;         /* cor */
+    font-weight: 500;       /* espessura */
+    margin-bottom: 12px;
+}
 
+.subtitle {
+    font-size: 1rem;
+    color: #94a3b8;
+    letter-spacing: 0.5px;
+}
 .animation-box {
     position: relative;
     width: 100%;
