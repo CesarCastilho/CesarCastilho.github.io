@@ -207,11 +207,9 @@ function animate(time) {
     requestAnimationFrame(animate);
 }
 
-window.addEventListener("load", () => {
-    resizeCanvas();
-    createNetwork();
-    requestAnimationFrame(animate);
-});
+resizeCanvas();
+createNetwork();
+requestAnimationFrame(animate);
 
 window.addEventListener("resize", () => {
     resizeCanvas();
