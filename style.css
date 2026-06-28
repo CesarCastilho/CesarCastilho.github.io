@@ -208,7 +208,7 @@ body {
         font-size: 1.6rem;
     }
 }
-.hero-title {
+h1.hero-title {
     color: #e2e8f0;
     font-size: 2rem;
     font-weight: 400;
