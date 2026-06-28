@@ -213,3 +213,18 @@ body {
     font-size: 2rem;
     font-weight: 500;
 }
+/* ===== HERO TITLE ===== */
+
+h1.hero-title {
+    color: #e2e8f0;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #94a3b8;
+    font-size: 1rem;
+    letter-spacing: 0.4px;
+}
