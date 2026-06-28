@@ -152,29 +152,70 @@ function drawPulses() {
     }
 }
 
-function drawNodes() {
+function drawNodes(time) {
+
     for (const n of nodes) {
+
+        // Halo pulsante dos infectados
         if (n.state === "I") {
+
+            const halo =
+                n.radius +
+                4 +
+                2 * Math.sin(time * 0.004);
+
             ctx.beginPath();
-            ctx.arc(n.x, n.y, n.radius + 4, 0, 2 * Math.PI);
-            ctx.strokeStyle = "rgba(248, 113, 113, 0.18)";
+            ctx.arc(
+                n.x,
+                n.y,
+                halo,
+                0,
+                2 * Math.PI
+            );
+
+            ctx.strokeStyle =
+                "rgba(248,113,113,0.18)";
+
             ctx.lineWidth = 1.2;
+
             ctx.stroke();
         }
 
+        // Cidade
+
         ctx.beginPath();
-        ctx.arc(n.x, n.y, n.radius, 0, 2 * Math.PI);
+        ctx.arc(
+            n.x,
+            n.y,
+            n.radius,
+            0,
+            2 * Math.PI
+        );
+
         ctx.fillStyle = STATES[n.state];
         ctx.fill();
 
-        ctx.beginPath();
-        ctx.arc(n.x, n.y, n.radius + 1.5, 0, 2 * Math.PI);
-        ctx.strokeStyle = "rgba(248, 250, 252, 0.18)";
-        ctx.lineWidth = 0.7;
-        ctx.stroke();
-    }
-}
+        // contorno discreto
 
+        ctx.beginPath();
+        ctx.arc(
+            n.x,
+            n.y,
+            n.radius + 1,
+            0,
+            2 * Math.PI
+        );
+
+        ctx.strokeStyle =
+            "rgba(255,255,255,0.12)";
+
+        ctx.lineWidth = 0.8;
+
+        ctx.stroke();
+
+    }
+
+}
 function drawLegend() {
     const y = canvas.height - 16;
 
