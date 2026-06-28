@@ -203,4 +203,8 @@ body {
     .hero-section h1 {
         font-size: 1.8rem;
     }
+    .hero-section .hero-title {
+    color: red !important;
+    font-size: 3rem !important;
+}
 }
