@@ -2,7 +2,7 @@ const canvas = document.getElementById("epidemicCanvas");
 const ctx = canvas.getContext("2d");
 
 let particles = [];
-const N = 90;
+const N = 22;
 
 function resizeCanvas() {
     canvas.width = canvas.offsetWidth;
@@ -99,7 +99,7 @@ function draw() {
             const b = particles[j];
             const d = distance(a, b);
 
-            if (d < 95) {
+            if (d < 120 && Math.random() < 0.02){
                 ctx.beginPath();
                 ctx.moveTo(a.x, a.y);
                 ctx.lineTo(b.x, b.y);
