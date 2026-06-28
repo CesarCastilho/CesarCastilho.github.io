@@ -2,7 +2,7 @@ const canvas = document.getElementById("epidemicCanvas");
 const ctx = canvas.getContext("2d");
 
 let particles = [];
-const N = 22;
+const N = 16;
 
 function resizeCanvas() {
     canvas.width = canvas.offsetWidth;
