@@ -148,7 +148,7 @@ body {
     height: 100%;
 }
 
-.hero-section h1 {
+.hero-section h1:not(.hero-title)  {
     max-width: 1000px;
     font-size: 2.3rem;
     font-weight: 600;
