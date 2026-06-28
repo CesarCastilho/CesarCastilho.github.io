@@ -211,3 +211,8 @@ h1.hero-title {
         height: 150px;
     }
 }
+/* CONTROLE FINAL DO TÍTULO */
+.hero-section h1.hero-title {
+    color: #38bdf8 !important;
+    font-size: 2rem !important;
+}
