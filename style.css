@@ -115,13 +115,21 @@ body {
 
 /* Frase de Destaque (Hero) */
 .hero-section {
-    position: relative;
-    overflow: hidden;
-    min-height: 55vh;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     margin-bottom: 40px;
-    background: transparent;
+}
+
+.animation-box {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    margin-bottom: 35px;
+    border-radius: 14px;
+    background: rgba(15, 23, 42, 0.65);
+    border: 1px solid rgba(125, 211, 252, 0.18);
 }
 
 #epidemicCanvas {
@@ -130,15 +138,15 @@ body {
     width: 100%;
     height: 100%;
     opacity: 1;
-    z-index: 1;
-    pointer-events: none;
 }
 
 .hero-section h1 {
-    position: relative;
-    z-index: 2;
+    max-width: 1000px;
+    font-size: 2.3rem;
+    font-weight: 600;
+    color: #38bdf8;
+    line-height: 1.4;
 }
-
 .hero-section .highlight {
     color: #7dd3fc;
     border-bottom: 2px solid #7dd3fc;
