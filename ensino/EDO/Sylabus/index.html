@@ -1,198 +1,541 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ensino - César Castilho</title>
+
+    <title>Plano de Ensino | Equações Diferenciais Ordinárias</title>
+
     <link rel="stylesheet" href="../../../style.css">
-    <script src="https://cdn.jsdelivr.net"></script>
+
+    <style>
+
+        body {
+            margin: 0;
+            background: #edf3f8;
+            color: #17324d;
+        }
+
+        .syllabus-page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 30px 80px;
+        }
+
+        /* Cabeçalho */
+
+        .syllabus-hero {
+            padding: 38px;
+            margin-bottom: 40px;
+
+            background: #dceaf4;
+            border: 1px solid #c1d5e3;
+            border-radius: 18px;
+
+            box-shadow: 0 8px 24px rgba(38, 73, 105, 0.08);
+        }
+
+        .syllabus-label {
+            margin-bottom: 15px;
+
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+
+            color: #176b8f;
+        }
+
+        .syllabus-hero h1 {
+            margin: 0 0 16px 0;
+
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            line-height: 1.12;
+
+            color: #17324d;
+        }
+
+        .syllabus-hero p {
+            margin: 0;
+
+            font-size: 1.15rem;
+            color: #49647b;
+        }
+
+        /* Informações iniciais */
+
+        .course-info {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+
+            margin-bottom: 35px;
+        }
+
+        .info-box {
+            padding: 20px;
+
+            background: #ffffff;
+
+            border: 1px solid #cedce6;
+            border-radius: 14px;
+
+            box-shadow: 0 5px 15px rgba(38, 73, 105, 0.05);
+        }
+
+        .info-box strong {
+            display: block;
+            margin-bottom: 6px;
+
+            color: #1a4f6d;
+        }
+
+        .info-box span {
+            color: #5d7080;
+            line-height: 1.5;
+        }
+
+        /* Conteúdo principal */
+
+        .course-syllabus {
+            padding: 38px;
+
+            background: #ffffff;
+
+            border: 1px solid #cedce6;
+            border-radius: 18px;
+
+            box-shadow: 0 8px 24px rgba(38, 73, 105, 0.06);
+        }
+
+        .course-syllabus h2 {
+            margin-top: 42px;
+            margin-bottom: 16px;
+
+            padding-bottom: 9px;
+
+            font-size: 1.65rem;
+
+            color: #17324d;
+
+            border-bottom: 2px solid #d5e5ef;
+        }
+
+        .course-syllabus h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .course-syllabus h3 {
+            margin-top: 28px;
+            margin-bottom: 12px;
+
+            font-size: 1.2rem;
+
+            color: #1a5f82;
+        }
+
+        .course-syllabus p {
+            margin-bottom: 16px;
+
+            line-height: 1.75;
+            color: #425d72;
+        }
+
+        .course-syllabus ul,
+        .course-syllabus ol {
+            margin-top: 10px;
+            margin-bottom: 24px;
+            padding-left: 28px;
+
+            color: #425d72;
+        }
+
+        .course-syllabus li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .course-syllabus strong {
+            color: #17324d;
+        }
+
+        /* Avaliação */
+
+        .assessment-box {
+            margin: 24px 0;
+            padding: 22px 24px;
+
+            background: #f4f9fc;
+
+            border-left: 4px solid #4f9fc3;
+            border-radius: 10px;
+        }
+
+        .formula {
+            margin: 22px 0;
+            padding: 16px 20px;
+
+            background: #edf6fa;
+
+            border: 1px solid #c8dfe9;
+            border-radius: 10px;
+
+            text-align: center;
+
+            font-size: 1.1rem;
+            font-weight: 600;
+
+            color: #1a5f82;
+        }
+
+        /* Bibliografia */
+
+        .bibliography li {
+            margin-bottom: 10px;
+        }
+
+        /* Voltar */
+
+        .back-link {
+            margin-top: 45px;
+            padding-top: 25px;
+
+            border-top: 1px solid #c9d7e1;
+        }
+
+        .back-link a {
+            color: #176b8f;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .back-link a:hover {
+            color: #0e4f6b;
+            text-decoration: underline;
+        }
+
+        /* Responsivo */
+
+        @media (max-width: 800px) {
+
+            .course-info {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (max-width: 700px) {
+
+            .syllabus-page {
+                padding: 30px 18px 60px;
+            }
+
+            .syllabus-hero {
+                padding: 28px 22px;
+            }
+
+            .course-syllabus {
+                padding: 25px 20px;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-<header class="simple-header">
-    <h1>Plano de Ensino -Introdução a Equações Diferenciais ordinárias</h1>
-    <p>Bacharelado em Matemática - UFPE 2026/2 </p>
-</header>
+<main class="syllabus-page">
 
-<main class="page-content">
 
-<div style="height: 50px;"></div>
+    <header class="syllabus-hero">
+
+        <div class="syllabus-label">
+            Bacharelado em Matemática · UFPE · 2026.2
+        </div>
+
+        <h1>
+            Plano de Ensino
+        </h1>
+
+        <p>
+            Introdução às Equações Diferenciais Ordinárias
+        </p>
+
+    </header>
+
+
+    <section class="course-info">
+
+        <div class="info-box">
+            <strong>Professor</strong>
+            <span>Prof. César Castilho</span>
+        </div>
+
+        <div class="info-box">
+            <strong>Carga horária</strong>
+            <span>75 horas</span>
+        </div>
+
+        <div class="info-box">
+            <strong>Pré-requisitos</strong>
+            <span>Cálculo Diferencial e Integral IV e Álgebra Linear</span>
+        </div>
+
+    </section>
 
 
     <section class="course-syllabus">
 
-  <h1>Equações Diferenciais Ordinárias</h1>
-  <h2>Bacharelado em Matemática – UFPE</h2>
 
-<div style="height: 50px;"></div>
+        <h2>Apresentação</h2>
 
+        <p>
+            As Equações Diferenciais Ordinárias constituem uma das principais ferramentas
+            matemáticas para a descrição de fenômenos dinâmicos. Aparecem naturalmente
+            na Física, Biologia, Epidemiologia, Ecologia, Engenharias, Economia, Química,
+            Teoria de Controle e em diversas outras áreas da ciência.
+        </p>
 
-
-  <p><strong>Professor:</strong> Prof. César Castilho</p>
-  <p><strong>Carga horária:</strong> 75 horas</p>
-  <p><strong>Pré-requisitos:</strong> Cálculo Diferencial e Integral IV e Álgebra Linear</p>
-
-<div style="height: 50px;"></div>
-
-
-  <h2>Apresentação</h2>
-
-<div style="height: 10px;"></div>
-
-
-  <p>
-    As Equações Diferenciais Ordinárias constituem uma das principais ferramentas
-    matemáticas para a descrição de fenômenos dinâmicos. Aparecem naturalmente
-    na Física, Biologia, Epidemiologia, Ecologia, Engenharias, Economia, Química,
-    Teoria de Controle e em diversas outras áreas da ciência.
-  </p>
-
-  <p>
-    Esta disciplina apresenta uma introdução  às Equações Diferenciais
-    Ordinárias, combinando fundamentos matemáticos, modelagem, análise qualitativa
-    e experimentação computacional. O curso não se limita a técnicas de resolução:
-    busca desenvolver a capacidade de formular modelos, interpretar soluções,
-    estudar estabilidade e compreender o comportamento global de sistemas
-    diferenciais.
-  </p>
-<div style="height: 10px;"></div>
-  <h2>Objetivos</h2>
-<div style="height: 10px;"></div>
-  <ul>
-    <li>Compreender o papel das equações diferenciais na modelagem matemática.</li>
-    <li>Resolver problemas de valor inicial por métodos analíticos clássicos.</li>
-    <li>Estudar existência e unicidade de soluções.</li>
-    <li>Analisar estabilidade de equilíbrios e retratos de fase.</li>
-    <li>Utilizar sistemas lineares e autovalores na análise de EDOs.</li>
-    <li>Investigar sistemas não lineares por meio de linearização local.</li>
-    <li>Aplicar métodos numéricos elementares.</li>
-    <li>Avaliar criticamente hipóteses e limitações de modelos matemáticos.</li>
-  </ul>
-<div style="height: 10px;"></div>
-  <h2>Conteúdo Programático</h2>
-<div style="height: 10px;"></div>
-  <h3>Unidade I – Modelagem e Equações de Primeira Ordem</h3>
-  <ul>
-    <li>Introdução à modelagem matemática.</li>
-    <li>Problemas de valor inicial.</li>
-    <li>Equações separáveis.</li>
-    <li>Equações lineares de primeira ordem.</li>
-    <li>Campos de direções.</li>
-    <li>Equilíbrios e estabilidade em dimensão um.</li>
-    <li>Existência e unicidade de soluções.</li>
-    <li>Aplicações: crescimento populacional, mistura, farmacocinética e transferência de calor.</li>
-  </ul>
-
-  <h3>Unidade II – Equações Lineares e Sistemas</h3>
-  <ul>
-    <li>Equações diferenciais lineares de segunda ordem.</li>
-    <li>Oscilador harmônico.</li>
-    <li>Oscilações amortecidas e forçadas.</li>
-    <li>Sistemas lineares de equações diferenciais.</li>
-    <li>Forma matricial.</li>
-    <li>Autovalores e autovetores.</li>
-    <li>Retratos de fase.</li>
-    <li>Introdução ao espaço de estados.</li>
-    <li>Integrais primeiras.</li>
-  </ul>
-
-  <h3>Unidade III – Sistemas Não Lineares e Aplicações</h3>
-  <ul>
-    <li>Sistemas não lineares.</li>
-    <li>O pêndulo.</li>
-    <li>Modelos de interação entre espécies.</li>
-    <li>Modelos epidemiológicos.</li>
-    <li>Linearização local.</li>
-    <li>Estabilidade Local.</li>
-    <li>Introdução às bifurcações.</li>
-    <li>Escalonamento e análise dimensional.</li>
-    <li>Estudos de caso em modelagem matemática.</li>
-  </ul>
-<div style="height: 10px;"></div>
-  <h2>Laboratórios Computacionais</h2>
-<div style="height: 10px;"></div>
-  <p>
-    Serão realizados seis laboratórios computacionais curtos, voltados à
-    visualização e exploração dos conceitos discutidos em sala de aula.
-    As atividades serão desenvolvidas em Notebooks previamente preparados
-    e disponibilizados pelo professor no GoogleColab via link.
-  </p>
-
-  <ol>
-    <li>Estabilidade de Sistemas Unidimensionais - Modelo Ecológico.</li>
-    <li>Pontos fixos, algoritmos e soluções numéricas.</li>
-    <li>Oscilador harmônico e Oscilador harmônico forçado.</li>
-    <li>Retratos de fase de sistemas lineares.</li>
-    <li>O pêndulo forçado.</li>
-    <li>Modelos epidemiológicos do tipo SIR.</li>
-  </ol>
-<div style="height: 10px;"></div>
-  <h2>Metodologia</h2>
-<div style="height: 10px;"></div>
-  <p>
-    As aulas combinarão exposição teórica, resolução de problemas, discussão de
-    modelos, atividades computacionais e estudos de caso. A disciplina enfatiza
-    a articulação entre teoria matemática, interpretação geométrica, aplicações
-    científicas e simulação numérica.
-  </p>
-<div style="height: 10px;"></div>
-  <h2>Avaliação</h2>
-<div style="height: 10px;"></div>
-  <ul>
-    <li>Primeira Avaliação (P1) Dia 14/09 </li>
-    <li>Segunda Avaliação (P2) Dia 21/10 </li>
-    <li>Terceira Avaliação (P3) Dia 25/11 </li>
-    <li>Relatório dos Laboratórios - Prova oral individual (PR) Dia 30/11 </li>
-    <li>Segunda Chamada (SG) Dia 7/12 </li>
-    <li>Prova Final (PF) Dia 9/12 </li>
-</ul>
-<div style="height: 10px;"></div>
-  <p>
-    A nota final será a média  das três provas 
-    acrescida de LB.  
-    <p> 
-    LB será um acréscimo dado pelos relatórios das atividades:
-    Os relatórios valem 20 pontos (soma das notas: os primeiros 4 valem 3 pontos e os últimos dois 4 pontos).
-    Seja NB a soma da nota  dos laboratórios (entregues) e após avaliação oral dos mesmos. </p>
-
-   <p> LB = Média Provas * NB / 100 , </p>
+        <p>
+            Esta disciplina apresenta uma introdução às Equações Diferenciais
+            Ordinárias, combinando fundamentos matemáticos, modelagem, análise qualitativa
+            e experimentação computacional. O curso não se limita a técnicas de resolução:
+            busca desenvolver a capacidade de formular modelos, interpretar soluções,
+            estudar estabilidade e compreender o comportamento global de sistemas
+            diferenciais.
+        </p>
 
 
-    ou seja, o aluno poderá aumentar até 20% de sua nota com a nota dos laboratórios.
-    <div style="height: 10px;"></div>
-    Nota final igual ou maior que 7.0 o aluno é aprovado
-    por média. Menor que 3.0 o aluno é reprovado. Para 
-    serem aprovados os alunos que fizerem
-    a prova final devem obter  média com a média anterior superior
-    ou igual a 5.0. Caso essa média seja menor que 5.0 o aluno está 
-    reprovado.
-     <div style="height: 10px;"></div>
-  </p>
-<div style="height: 10px;"></div>
-  <h2>Bibliografia Básica</h2>
-<div style="height: 10px;"></div>
-  <ul>
-    <li>LOGEMANN, H.; RYAN, E. P. <em>An Introduction to Ordinary Differential Equations</em>.</li>
-    <li>BRAUN, M. <em>Differential Equations and Their Applications</em>.</li>
-  </ul>
-<div style="height: 10px;"></div>
-  <h2>Bibliografia Complementar</h2>
-<div style="height: 10px;"></div>
-  <ul>
-    <li>TENENBAUM, M.; POLLARD, H. <em>Ordinary Differential Equations</em>.</li>
-    <li>LOGAN, J. D. <em>Applied Mathematics</em>.</li>
-    <li>STROGATZ, S. H. <em>Nonlinear Dynamics and Chaos</em>.</li>
-    <li>TESCHL, G. <em>Ordinary Differential Equations and Dynamical Systems</em>.</li>
-  </ul>
+        <h2>Objetivos</h2>
 
- 
- 
+        <ul>
+            <li>Compreender o papel das equações diferenciais na modelagem matemática.</li>
+            <li>Resolver problemas de valor inicial por métodos analíticos clássicos.</li>
+            <li>Estudar existência e unicidade de soluções.</li>
+            <li>Analisar estabilidade de equilíbrios e retratos de fase.</li>
+            <li>Utilizar sistemas lineares e autovalores na análise de EDOs.</li>
+            <li>Investigar sistemas não lineares por meio de linearização local.</li>
+            <li>Aplicar métodos numéricos elementares.</li>
+            <li>Avaliar criticamente hipóteses e limitações de modelos matemáticos.</li>
+        </ul>
 
 
-</section>
+        <h2>Conteúdo Programático</h2>
+
+
+        <h3>Unidade I – Modelagem e Equações de Primeira Ordem</h3>
+
+        <ul>
+            <li>Introdução à modelagem matemática.</li>
+            <li>Problemas de valor inicial.</li>
+            <li>Equações separáveis.</li>
+            <li>Equações lineares de primeira ordem.</li>
+            <li>Campos de direções.</li>
+            <li>Equilíbrios e estabilidade em dimensão um.</li>
+            <li>Existência e unicidade de soluções.</li>
+            <li>Aplicações: crescimento populacional, mistura, farmacocinética e transferência de calor.</li>
+        </ul>
+
+
+        <h3>Unidade II – Equações Lineares e Sistemas</h3>
+
+        <ul>
+            <li>Equações diferenciais lineares de segunda ordem.</li>
+            <li>Oscilador harmônico.</li>
+            <li>Oscilações amortecidas e forçadas.</li>
+            <li>Sistemas lineares de equações diferenciais.</li>
+            <li>Forma matricial.</li>
+            <li>Autovalores e autovetores.</li>
+            <li>Retratos de fase.</li>
+            <li>Introdução ao espaço de estados.</li>
+            <li>Integrais primeiras.</li>
+        </ul>
+
+
+        <h3>Unidade III – Sistemas Não Lineares e Aplicações</h3>
+
+        <ul>
+            <li>Sistemas não lineares.</li>
+            <li>O pêndulo.</li>
+            <li>Modelos de interação entre espécies.</li>
+            <li>Modelos epidemiológicos.</li>
+            <li>Linearização local.</li>
+            <li>Estabilidade local.</li>
+            <li>Introdução às bifurcações.</li>
+            <li>Escalonamento e análise dimensional.</li>
+            <li>Estudos de caso em modelagem matemática.</li>
+        </ul>
+
+
+        <h2>Laboratórios Computacionais</h2>
+
+        <p>
+            Serão realizados seis laboratórios computacionais curtos, voltados à
+            visualização e exploração dos conceitos discutidos em sala de aula.
+            As atividades serão desenvolvidas em notebooks previamente preparados
+            e disponibilizados pelo professor no Google Colab via link.
+        </p>
+
+        <ol>
+            <li>Estabilidade de Sistemas Unidimensionais - Modelo Ecológico.</li>
+            <li>Pontos fixos, algoritmos e soluções numéricas.</li>
+            <li>Oscilador harmônico e Oscilador harmônico forçado.</li>
+            <li>Retratos de fase de sistemas lineares.</li>
+            <li>O pêndulo forçado.</li>
+            <li>Modelos epidemiológicos do tipo SIR.</li>
+        </ol>
+
+
+        <h2>Metodologia</h2>
+
+        <p>
+            As aulas combinarão exposição teórica, resolução de problemas, discussão de
+            modelos, atividades computacionais e estudos de caso. A disciplina enfatiza
+            a articulação entre teoria matemática, interpretação geométrica, aplicações
+            científicas e simulação numérica.
+        </p>
+
+
+        <h2>Avaliação</h2>
+
+<div class="assessment-box">
+
+    <ul>
+        <li>Listas de Exercícios Semanais (Li)</li>
+        <li>Primeira Avaliação (P1): 14/09</li>
+        <li>Segunda Avaliação (P2): 21/10</li>
+        <li>Terceira Avaliação (P3): 25/11</li>
+        <li>Relatórios dos Laboratórios e Prova Oral Individual (PR): 30/11</li>
+        <li>Segunda Chamada (SG): 07/12</li>
+        <li>Prova Final (PF): 09/12</li>
+    </ul>
+
+</div>
+
+<p>
+    As listas de exercícios terão peso de 20% na composição da nota final,
+    enquanto as provas terão peso de 80%.
+</p>
+
+<p>
+    Seja <strong>Li</strong> a nota obtida nas listas de exercícios e
+    <strong>MP</strong> a média aritmética das três avaliações:
+</p>
+
+<div class="formula">
+    MP = (P1 + P2 + P3) / 3
+</div>
+
+<p>
+    A nota correspondente às provas poderá receber um acréscimo decorrente
+    das atividades de laboratório. Os seis relatórios de laboratório totalizam
+    20 pontos: os quatro primeiros valem 3 pontos cada e os dois últimos
+    valem 4 pontos cada.
+</p>
+
+<p>
+    Seja <strong>NB</strong> a soma das notas obtidas nos laboratórios,
+    após a entrega dos relatórios e sua avaliação na prova oral individual.
+    O bônus dos laboratórios, denominado <strong>LB</strong>, será calculado por:
+</p>
+
+<div class="formula">
+    LB = MP × NB / 100
+</div>
+
+<p>
+    Dessa forma, o desempenho nos laboratórios poderá acrescentar até 20%
+    à média das provas.
+</p>
+
+<p>
+    Definimos então a nota das provas com o bônus dos laboratórios por:
+</p>
+
+<div class="formula">
+    NP = MP + LB
+</div>
+
+<p>
+    A nota final antes da prova final, denominada <strong>NF</strong>,
+    será calculada por:
+</p>
+
+<div class="formula">
+    NF = 0,2 × Li + 0,8 × NP
+</div>
+
+<p>
+    O aluno com nota final igual ou superior a 7,0 será aprovado por média.
+    O aluno com nota final inferior a 3,0 será reprovado.
+</p>
+
+<p>
+    O aluno cuja nota final seja igual ou superior a 3,0 e inferior a 7,0
+    deverá realizar a prova final. Nesse caso, será aprovado se a média entre
+    a nota final anterior e a nota da prova final for igual ou superior a 5,0.
+</p>
+        <h2>Bibliografia Básica</h2>
+
+        <ul class="bibliography">
+            <li>
+                LOGEMANN, H.; RYAN, E. P.
+                <em>An Introduction to Ordinary Differential Equations</em>.
+            </li>
+
+            <li>
+                BRAUN, M.
+                <em>Differential Equations and Their Applications</em>.
+            </li>
+        </ul>
+
+
+        <h2>Bibliografia Complementar</h2>
+
+        <ul class="bibliography">
+
+            <li>
+                TENENBAUM, M.; POLLARD, H.
+                <em>Ordinary Differential Equations</em>.
+            </li>
+
+            <li>
+                LOGAN, J. D.
+                <em>Applied Mathematics</em>.
+            </li>
+
+            <li>
+                STROGATZ, S. H.
+                <em>Nonlinear Dynamics and Chaos</em>.
+            </li>
+
+            <li>
+                TESCHL, G.
+                <em>Ordinary Differential Equations and Dynamical Systems</em>.
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <div class="back-link">
+
+        <a href="/ensino/EDO/">
+            ← Voltar para a página da disciplina
+        </a>
+
+    </div>
+
 
 </main>
 
 </body>
+
 </html>
+```

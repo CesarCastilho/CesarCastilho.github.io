@@ -1,39 +1,332 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ensino - César Castilho</title>
+
+    <title>Equações Diferenciais Ordinárias | César Castilho</title>
+
     <link rel="stylesheet" href="../../style.css">
+
+    <style>
+
+        body {
+            margin: 0;
+            background: #edf3f8;
+            color: #17324d;
+        }
+
+        .edo-page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 30px 80px;
+        }
+
+        /* Cabeçalho */
+
+        .edo-hero {
+            margin-bottom: 55px;
+            padding: 38px;
+            border-radius: 18px;
+            background: #dceaf4;
+            border: 1px solid #c1d5e3;
+            box-shadow: 0 8px 24px rgba(38, 73, 105, 0.08);
+        }
+
+        .edo-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #176b8f;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .edo-hero h1 {
+            font-size: clamp(2.2rem, 5vw, 3.7rem);
+            line-height: 1.12;
+            margin: 0 0 18px 0;
+            font-weight: 650;
+            color: #17324d;
+        }
+
+        .edo-subtitle {
+            font-size: 1.2rem;
+            color: #49647b;
+            margin-bottom: 28px;
+        }
+
+        /* Informações rápidas */
+
+        .edo-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .edo-info span {
+            padding: 8px 16px;
+            border: 1px solid #9dbfd2;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            color: #245873;
+            background: #f5fafc;
+        }
+
+        /* Títulos */
+
+        .edo-section-title {
+            margin-bottom: 8px;
+            font-size: 1.9rem;
+            color: #17324d;
+        }
+
+        .edo-section-intro {
+            margin-bottom: 32px;
+            color: #526b7f;
+            max-width: 760px;
+            line-height: 1.65;
+        }
+
+        /* Grid */
+
+        .edo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .edo-card {
+            display: block;
+            padding: 26px;
+            min-height: 135px;
+
+            text-decoration: none;
+
+            border: 1px solid #cedce6;
+            border-radius: 14px;
+
+            background: #ffffff;
+
+            box-shadow: 0 6px 18px rgba(38, 73, 105, 0.06);
+
+            transition:
+                transform 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease,
+                background 0.2s ease;
+        }
+
+        .edo-card:hover {
+            transform: translateY(-4px);
+            border-color: #5ca6c7;
+            background: #f7fbfd;
+            box-shadow: 0 10px 24px rgba(38, 73, 105, 0.12);
+        }
+
+        .edo-card h3 {
+            margin: 0 0 9px 0;
+            font-size: 1.25rem;
+            color: #1a4f6d;
+        }
+
+        .edo-card p {
+            margin: 0;
+            line-height: 1.5;
+            font-size: 0.96rem;
+            color: #5d7080;
+        }
+
+        .edo-card .arrow {
+            display: inline-block;
+            margin-top: 17px;
+            color: #1782ad;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .edo-card-wide {
+            grid-column: span 2;
+        }
+
+        /* Voltar */
+
+        .edo-back {
+            margin-top: 55px;
+            padding-top: 25px;
+            border-top: 1px solid #c9d7e1;
+        }
+
+        .edo-back a {
+            text-decoration: none;
+            color: #176b8f;
+            font-weight: 600;
+        }
+
+        .edo-back a:hover {
+            color: #0e4f6b;
+            text-decoration: underline;
+        }
+
+        /* Responsivo */
+
+        @media (max-width: 700px) {
+
+            .edo-page {
+                padding: 30px 18px 60px;
+            }
+
+            .edo-hero {
+                padding: 28px 22px;
+            }
+
+            .edo-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .edo-card-wide {
+                grid-column: span 1;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-<header class="simple-header">
-    <h1>Introdução a Equações Diferenciais Ordinárias</h1>
-    <p>Bacharelado em Matemática - UFPE 2026/2 </p>
-</header>
+<main class="edo-page">
 
-<main class="page-content">
+    <header class="edo-hero">
 
-    <section class="section">
-        <h2>Material do Curso</h2>
+        <div class="edo-label">
+            Bacharelado em Matemática · UFPE
+        </div>
+
+        <h1>
+            Introdução às Equações<br>
+            Diferenciais Ordinárias
+        </h1>
+
+        <p class="edo-subtitle">
+            Materiais, atividades e informações da disciplina.
+        </p>
+
+        <div class="edo-info">
+            <span>2026.2</span>
+            <span>75 horas</span>
+            <span>Bacharelado em Matemática</span>
+            <span>UFPE</span>
+        </div>
+
+    </header>
 
 
-       <ul class="course-list">
+    <section>
 
-            <li><a href="Sylabus/index.html">Plano de Ensino</a></li>
+        <h2 class="edo-section-title">
+            Material do Curso
+        </h2>
 
-            <li><a href="notas/index.html">Notas de Aula</a></li>
+        <p class="edo-section-intro">
+            Nesta página estão reunidos o plano de ensino,
+            notas de aula, listas de exercícios, atividades
+            computacionais e projetos desenvolvidos ao longo
+            da disciplina.
+        </p>
 
-            <li><a href="listas/index.html">Listas de Exercícios</a></li>
 
-            <li><a href="laboratorios/index.html">Laboratórios</a></li>
+        <div class="edo-grid">
 
-            <li><a href="projetos/index.html">Projetos</a></li>
+            <a class="edo-card"
+               href="/ensino/EDO/Sylabus/">
 
-            </ul>
+                <h3>Plano de Ensino</h3>
+
+                <p>
+                    Ementa, objetivos, cronograma,
+                    metodologia, avaliação e referências.
+                </p>
+
+                <span class="arrow">→</span>
+
+            </a>
+
+
+            <a class="edo-card"
+               href="/ensino/EDO/notas/">
+
+                <h3>Notas de Aula</h3>
+
+                <p>
+                    Material teórico, exemplos e conteúdos
+                    utilizados durante as aulas.
+                </p>
+
+                <span class="arrow">→</span>
+
+            </a>
+
+
+            <a class="edo-card"
+               href="/ensino/EDO/listas/">
+
+                <h3>Listas de Exercícios</h3>
+
+                <p>
+                    Problemas e exercícios para estudo,
+                    revisão e aprofundamento.
+                </p>
+
+                <span class="arrow">→</span>
+
+            </a>
+
+
+            <a class="edo-card"
+               href="/ensino/EDO/laboratorios/">
+
+                <h3>Laboratórios</h3>
+
+                <p>
+                    Atividades computacionais,
+                    visualizações e experimentos numéricos.
+                </p>
+
+                <span class="arrow">→</span>
+
+            </a>
+
+
+            <a class="edo-card edo-card-wide"
+               href="/ensino/EDO/projetos/">
+
+                <h3>Projetos</h3>
+
+                <p>
+                    Projetos de modelagem matemática e
+                    aplicações de equações diferenciais ordinárias.
+                </p>
+
+                <span class="arrow">→</span>
+
+            </a>
+
+        </div>
+
     </section>
+
+
+    <div class="edo-back">
+
+        <a href="/ensino/">
+            ← Voltar para Ensino
+        </a>
+
+    </div>
 
 </main>
 

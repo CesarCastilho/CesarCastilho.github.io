@@ -1,38 +1,312 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ensino - César Castilho</title>
+
+    <title>Ensino | César Castilho</title>
+
     <link rel="stylesheet" href="../style.css">
+
+    <style>
+
+        body {
+            margin: 0;
+            background: #edf3f8;
+            color: #17324d;
+        }
+
+        .teaching-page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 30px 80px;
+        }
+
+        /* Cabeçalho */
+
+        .teaching-hero {
+            padding: 38px;
+            margin-bottom: 50px;
+
+            background: #dceaf4;
+            border: 1px solid #c1d5e3;
+            border-radius: 18px;
+
+            box-shadow: 0 8px 24px rgba(38, 73, 105, 0.08);
+        }
+
+        .teaching-label {
+            margin-bottom: 15px;
+
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+
+            color: #176b8f;
+        }
+
+        .teaching-hero h1 {
+            margin: 0 0 16px 0;
+
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
+            line-height: 1.1;
+            font-weight: 650;
+
+            color: #17324d;
+        }
+
+        .teaching-hero p {
+            max-width: 720px;
+            margin: 0;
+
+            font-size: 1.15rem;
+            line-height: 1.6;
+
+            color: #49647b;
+        }
+
+        /* Seção de disciplinas */
+
+        .section-title {
+            margin-bottom: 8px;
+
+            font-size: 1.9rem;
+            color: #17324d;
+        }
+
+        .section-intro {
+            max-width: 760px;
+            margin-bottom: 32px;
+
+            line-height: 1.65;
+            color: #526b7f;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        /* Cartões */
+
+        .course-card {
+            display: block;
+
+            padding: 30px;
+            min-height: 190px;
+
+            text-decoration: none;
+
+            background: #ffffff;
+
+            border: 1px solid #cedce6;
+            border-radius: 16px;
+
+            box-shadow: 0 6px 18px rgba(38, 73, 105, 0.06);
+
+            transition:
+                transform 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease,
+                background 0.2s ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-4px);
+
+            border-color: #5ca6c7;
+            background: #f7fbfd;
+
+            box-shadow: 0 10px 24px rgba(38, 73, 105, 0.12);
+        }
+
+        .course-period {
+            display: inline-block;
+
+            margin-bottom: 18px;
+            padding: 6px 12px;
+
+            font-size: 0.82rem;
+            font-weight: 600;
+
+            color: #245873;
+            background: #e9f4f9;
+
+            border: 1px solid #b7d3e1;
+            border-radius: 999px;
+        }
+
+        .course-card h2 {
+            margin: 0 0 12px 0;
+
+            font-size: 1.45rem;
+            line-height: 1.3;
+
+            color: #1a4f6d;
+        }
+
+        .course-card p {
+            margin: 0;
+
+            font-size: 0.97rem;
+            line-height: 1.6;
+
+            color: #5d7080;
+        }
+
+        .course-meta {
+            margin-top: 20px;
+
+            font-size: 0.9rem;
+            color: #708493;
+        }
+
+        .course-arrow {
+            display: inline-block;
+
+            margin-top: 20px;
+
+            font-size: 1.15rem;
+            font-weight: 600;
+
+            color: #1782ad;
+        }
+
+        /* Voltar */
+
+        .teaching-back {
+            margin-top: 55px;
+            padding-top: 25px;
+
+            border-top: 1px solid #c9d7e1;
+        }
+
+        .teaching-back a {
+            font-weight: 600;
+            text-decoration: none;
+
+            color: #176b8f;
+        }
+
+        .teaching-back a:hover {
+            color: #0e4f6b;
+            text-decoration: underline;
+        }
+
+        /* Responsivo */
+
+        @media (max-width: 700px) {
+
+            .teaching-page {
+                padding: 30px 18px 60px;
+            }
+
+            .teaching-hero {
+                padding: 28px 22px;
+            }
+
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-<header class="simple-header">
-    <h1>Ensino</h1>
-    <p>Disciplinas, materiais didáticos e projetos de ensino.</p>
-</header>
+<main class="teaching-page">
 
-<main class="page-content">
+    <!-- Cabeçalho -->
 
-    <section class="section">
-        <h2>Disciplinas</h2>
+    <header class="teaching-hero">
 
-    
-       <ul>
+        <div class="teaching-label">
+            UFPE · Matemática
+        </div>
+
+        <h1>
+            Ensino
+        </h1>
+
+        <p>
+            Materiais didáticos, planos de ensino, notas de aula,
+            exercícios, atividades computacionais e projetos
+            associados às disciplinas que ministro.
+        </p>
+
+    </header>
 
 
-       <li><a href="EDO/index.html">Introdução às Equações Diferenciais Ordinárias</a></li>
+    <!-- Disciplinas -->
+
+    <section>
+
+        <h2 class="section-title">
+            Disciplinas
+        </h2>
+
+        <p class="section-intro">
+            Selecione uma disciplina para acessar o material
+            correspondente.
+        </p>
 
 
+        <div class="course-grid">
 
-       <li><a href="../index.html">Voltar para a página inicial</a></li>
+            <!-- EDO -->
 
-</ul>
+            <a class="course-card"
+               href="/ensino/EDO/">
+
+                <span class="course-period">
+                    2026.2
+                </span>
+
+                <h2>
+                    Introdução às Equações Diferenciais Ordinárias
+                </h2>
+
+                <p>
+                    Teoria qualitativa, métodos analíticos,
+                    aplicações, modelagem matemática e atividades
+                    computacionais relacionadas a equações
+                    diferenciais ordinárias.
+                </p>
+
+                <div class="course-meta">
+                    Bacharelado em Matemática · 60 h
+                </div>
+
+                <span class="course-arrow">
+                    Acessar disciplina →
+                </span>
+
+            </a>
+
+        </div>
+
     </section>
 
-</main>  
+
+    <!-- Voltar -->
+
+    <div class="teaching-back">
+
+        <a href="/">
+            ← Voltar para a página principal
+        </a>
+
+    </div>
+
+</main>
 
 </body>
+
 </html>
