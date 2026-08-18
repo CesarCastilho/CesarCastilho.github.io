@@ -1,0 +1,373 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notas de Aula | EDO</title>
+
+    <link rel="stylesheet" href="../../../style.css">
+
+    <style>
+
+        body {
+            margin: 0;
+            background: #edf3f8;
+            color: #17324d;
+        }
+
+        .notes-page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 30px 80px;
+        }
+
+        /* Cabeçalho */
+
+        .notes-hero {
+            margin-bottom: 50px;
+            padding: 38px;
+
+            background: #dceaf4;
+            border: 1px solid #c1d5e3;
+            border-radius: 18px;
+
+            box-shadow: 0 8px 24px rgba(38, 73, 105, 0.08);
+        }
+
+        .notes-label {
+            margin-bottom: 15px;
+
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+
+            color: #176b8f;
+        }
+
+        .notes-hero h1 {
+            margin: 0 0 16px 0;
+
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            line-height: 1.12;
+            font-weight: 650;
+
+            color: #17324d;
+        }
+
+        .notes-hero p {
+            max-width: 720px;
+            margin: 0;
+
+            font-size: 1.15rem;
+            line-height: 1.6;
+
+            color: #49647b;
+        }
+
+        /* Seção */
+
+        .section-title {
+            margin-bottom: 8px;
+
+            font-size: 1.9rem;
+            color: #17324d;
+        }
+
+        .section-intro {
+            max-width: 760px;
+            margin-bottom: 32px;
+
+            line-height: 1.65;
+            color: #526b7f;
+        }
+
+        /* Grid */
+
+        .material-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        /* Cartões */
+
+        .material-card {
+            padding: 28px;
+
+            background: #ffffff;
+
+            border: 1px solid #cedce6;
+            border-radius: 14px;
+
+            box-shadow: 0 6px 18px rgba(38, 73, 105, 0.06);
+
+            transition:
+                transform 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .material-card:hover {
+            transform: translateY(-3px);
+            border-color: #5ca6c7;
+            box-shadow: 0 10px 24px rgba(38, 73, 105, 0.12);
+        }
+
+        .lesson-number {
+            display: inline-block;
+
+            margin-bottom: 14px;
+            padding: 6px 12px;
+
+            font-size: 0.82rem;
+            font-weight: 600;
+
+            color: #245873;
+            background: #e9f4f9;
+
+            border: 1px solid #b7d3e1;
+            border-radius: 999px;
+        }
+
+        .material-card h2 {
+            margin: 0 0 10px 0;
+
+            font-size: 1.35rem;
+            color: #1a4f6d;
+        }
+
+        .material-card p {
+            max-width: 760px;
+            margin: 0 0 20px 0;
+
+            font-size: 0.97rem;
+            line-height: 1.6;
+
+            color: #5d7080;
+        }
+
+        /* Botões */
+
+        .button-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .colab-button,
+        .download-button {
+            display: inline-block;
+
+            padding: 10px 18px;
+
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.92rem;
+
+            border-radius: 8px;
+
+            transition:
+                background 0.2s ease,
+                transform 0.2s ease;
+        }
+
+        .colab-button {
+            color: #ffffff;
+            background: #176b8f;
+        }
+
+        .colab-button:hover {
+            background: #0e4f6b;
+            transform: translateY(-1px);
+        }
+
+        .download-button {
+            color: #176b8f;
+            background: #edf6fa;
+            border: 1px solid #b7d3e1;
+        }
+
+        .download-button:hover {
+            background: #dcecf4;
+            transform: translateY(-1px);
+        }
+
+        /* Voltar */
+
+        .back-link {
+            margin-top: 55px;
+            padding-top: 25px;
+
+            border-top: 1px solid #c9d7e1;
+        }
+
+        .back-link a {
+            font-weight: 600;
+            text-decoration: none;
+
+            color: #176b8f;
+        }
+
+        .back-link a:hover {
+            color: #0e4f6b;
+            text-decoration: underline;
+        }
+
+        /* Responsivo */
+
+        @media (max-width: 700px) {
+
+            .notes-page {
+                padding: 30px 18px 60px;
+            }
+
+            .notes-hero {
+                padding: 28px 22px;
+            }
+
+            .material-card {
+                padding: 22px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<main class="notes-page">
+
+    <header class="notes-hero">
+
+        <div class="notes-label">
+            Bacharelado em Matemática · UFPE · 2026.2
+        </div>
+
+        <h1>
+            Notas de Aula
+        </h1>
+
+        <p>
+            Introdução às Equações Diferenciais Ordinárias
+        </p>
+
+    </header>
+
+
+    <section>
+
+        <h2 class="section-title">
+            Notebooks
+        </h2>
+
+        <p class="section-intro">
+            Os notebooks abaixo contêm notas de aula, exemplos,
+            visualizações e atividades computacionais utilizadas
+            ao longo da disciplina.
+        </p>
+
+
+        <div class="material-grid">
+
+
+            <!-- NOTEBOOK 01 -->
+
+            <article class="material-card">
+
+                <span class="lesson-number">
+                    Aula 01
+                </span>
+
+                <h2>
+                    Conceitos Básicos de Equações Diferenciais Ordinárias
+                </h2>
+
+                <p>
+                    Introdução às equações diferenciais ordinárias,
+                    soluções, problemas de valor inicial, interpretação
+                    geométrica e campos de direções.
+                </p>
+
+                <div class="button-row">
+
+                    <a class="colab-button"
+                       href="https://colab.research.google.com/github/CesarCastilho/CesarCastilho.github.io/blob/main/ensino/EDO/notas/01_Conceitos_Basicos_EDO.ipynb"
+                       target="_blank">
+                        Abrir no Google Colab
+                    </a>
+
+                    <a class="download-button"
+                       href="01_Conceitos_Basicos_EDO.ipynb"
+                       download>
+                        Baixar .ipynb
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- NOTEBOOK 02 -->
+
+            <article class="material-card">
+
+                <span class="lesson-number">
+                    Aula 02
+                </span>
+
+                <h2>
+                    Método das Isóclinas
+                </h2>
+
+                <p>
+                    Estudo do método das isóclinas,
+                    campos de direções, interpretação geométrica
+                    e construção qualitativa de curvas integrais.
+                </p>
+
+                <div class="button-row">
+
+                    <a class="colab-button"
+                       href="https://colab.research.google.com/github/CesarCastilho/CesarCastilho.github.io/blob/main/ensino/EDO/notas/02_Metodo_das_Isoclinas_EDO.ipynb"
+                       target="_blank">
+                        Abrir no Google Colab
+                    </a>
+
+                    <a class="download-button"
+                       href="02_Metodo_das_Isoclinas_EDO.ipynb"
+                       download>
+                        Baixar .ipynb
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <div class="back-link">
+
+        <a href="/ensino/EDO/">
+            ← Voltar para a página da disciplina
+        </a>
+
+    </div>
+
+
+</main>
+
+</body>
+
+</html>
+```

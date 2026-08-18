@@ -1,0 +1,355 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Listas de Exercícios | EDO</title>
+
+    <!-- Estilo geral do site -->
+    <link rel="stylesheet" href="../../../style.css">
+
+    <!-- Estilo específico desta página -->
+    <style>
+
+        body {
+            margin: 0;
+            background: #edf3f8;
+            color: #17324d;
+        }
+
+        .lists-page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 30px 80px;
+        }
+
+        /* Cabeçalho */
+
+        .lists-hero {
+            margin-bottom: 50px;
+            padding: 38px;
+
+            background: #dceaf4;
+            border: 1px solid #c1d5e3;
+            border-radius: 18px;
+
+            box-shadow: 0 8px 24px rgba(38, 73, 105, 0.08);
+        }
+
+        .lists-label {
+            margin-bottom: 15px;
+
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+
+            color: #176b8f;
+        }
+
+        .lists-hero h1 {
+            margin: 0 0 16px 0;
+
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            line-height: 1.12;
+            font-weight: 650;
+
+            color: #17324d;
+        }
+
+        .lists-hero p {
+            max-width: 720px;
+            margin: 0;
+
+            font-size: 1.15rem;
+            line-height: 1.6;
+
+            color: #49647b;
+        }
+
+        /* Título da seção */
+
+        .section-title {
+            margin-bottom: 8px;
+
+            font-size: 1.9rem;
+            color: #17324d;
+        }
+
+        .section-intro {
+            max-width: 760px;
+            margin-bottom: 32px;
+
+            line-height: 1.65;
+            color: #526b7f;
+        }
+
+        /* Lista de materiais */
+
+        .material-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        /* Cartão */
+
+        .material-card {
+            padding: 28px;
+
+            background: #ffffff;
+
+            border: 1px solid #cedce6;
+            border-radius: 14px;
+
+            box-shadow: 0 6px 18px rgba(38, 73, 105, 0.06);
+
+            transition:
+                transform 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .material-card:hover {
+            transform: translateY(-3px);
+
+            border-color: #5ca6c7;
+
+            box-shadow: 0 10px 24px rgba(38, 73, 105, 0.12);
+        }
+
+        /* Número da lista */
+
+        .list-number {
+            display: inline-block;
+
+            margin-bottom: 14px;
+            padding: 6px 12px;
+
+            font-size: 0.82rem;
+            font-weight: 600;
+
+            color: #245873;
+            background: #e9f4f9;
+
+            border: 1px solid #b7d3e1;
+            border-radius: 999px;
+        }
+
+        .material-card h2 {
+            margin: 0 0 10px 0;
+
+            font-size: 1.35rem;
+            color: #1a4f6d;
+        }
+
+        .material-card p {
+            max-width: 760px;
+            margin: 0 0 20px 0;
+
+            font-size: 0.97rem;
+            line-height: 1.6;
+
+            color: #5d7080;
+        }
+
+        /* Botão */
+
+        .pdf-button {
+            display: inline-block;
+
+            padding: 10px 18px;
+
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.92rem;
+
+            color: #ffffff;
+            background: #176b8f;
+
+            border-radius: 8px;
+
+            transition:
+                background 0.2s ease,
+                transform 0.2s ease;
+        }
+
+        .pdf-button:hover {
+            background: #0e4f6b;
+            transform: translateY(-1px);
+        }
+
+        /* Voltar */
+
+        .back-link {
+            margin-top: 55px;
+            padding-top: 25px;
+
+            border-top: 1px solid #c9d7e1;
+        }
+
+        .back-link a {
+            font-weight: 600;
+            text-decoration: none;
+
+            color: #176b8f;
+        }
+
+        .back-link a:hover {
+            color: #0e4f6b;
+            text-decoration: underline;
+        }
+
+        /* Responsivo */
+
+        @media (max-width: 700px) {
+
+            .lists-page {
+                padding: 30px 18px 60px;
+            }
+
+            .lists-hero {
+                padding: 28px 22px;
+            }
+
+            .material-card {
+                padding: 22px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<main class="lists-page">
+
+
+    <!-- Cabeçalho -->
+
+    <header class="lists-hero">
+
+        <div class="lists-label">
+            Bacharelado em Matemática · UFPE · 2026.2
+        </div>
+
+        <h1>
+            Listas de Exercícios
+        </h1>
+
+        <p>
+            Introdução às Equações Diferenciais Ordinárias
+        </p>
+
+    </header>
+
+
+    <!-- Listas -->
+
+    <section>
+
+        <h2 class="section-title">
+            Material
+        </h2>
+
+        <p class="section-intro">
+            Nesta página serão disponibilizadas as listas de exercícios
+            utilizadas ao longo da disciplina.
+        </p>
+
+
+        <div class="material-grid">
+
+
+            <!-- LISTA 01 -->
+
+            <article class="material-card">
+
+                <span class="list-number">
+                    Lista 01
+                </span>
+
+                <h2>
+                    Equações Diferenciais - Introdução
+                </h2>
+
+                <p>
+                    Exercícios sobre conceitos básicos, campos de direções,
+                    isóclinas e equações diferenciais de primeira ordem.
+                </p>
+
+                <a class="pdf-button"
+                   href="lista1.pdf"
+                   target="_blank">
+                    Abrir PDF
+                </a>
+
+            </article>
+
+
+            <!--
+            ============================================================
+            PARA ADICIONAR UMA NOVA LISTA:
+
+            Copie o bloco <article>...</article> acima e altere:
+
+            1. Lista 01 -> Lista 02
+            2. O título
+            3. A descrição
+            4. lista01.pdf -> lista02.pdf
+
+            Exemplo:
+
+            <article class="material-card">
+
+                <span class="list-number">
+                    Lista 02
+                </span>
+
+                <h2>
+                    Equações Separáveis
+                </h2>
+
+                <p>
+                    Exercícios sobre equações diferenciais separáveis.
+                </p>
+
+                <a class="pdf-button"
+                   href="lista02.pdf"
+                   target="_blank">
+                    Abrir PDF
+                </a>
+
+            </article>
+            ============================================================
+            -->
+
+
+        </div>
+
+    </section>
+
+
+    <!-- Voltar -->
+
+    <div class="back-link">
+
+        <a href="/ensino/EDO/">
+            ← Voltar para a página da disciplina
+        </a>
+
+    </div>
+
+
+</main>
+
+</body>
+
+</html>
+```
