@@ -1,0 +1,390 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Produção de Conteúdo Digital para o Ensino de Matemática</title>
+
+    <!-- Estilo geral do site -->
+    <link rel="stylesheet" href="../../style.css">
+
+    <!-- Estilo específico da página da disciplina -->
+    <style>
+
+        body {
+            margin: 0;
+            background: #edf3f8;
+            color: #17324d;
+        }
+
+        .course-page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 30px 80px;
+        }
+
+        /* =========================================================
+           CABEÇALHO
+           ========================================================= */
+
+        .course-hero {
+            margin-bottom: 55px;
+            padding: 38px;
+
+            background: #dceaf4;
+            border: 1px solid #c1d5e3;
+            border-radius: 18px;
+
+            box-shadow: 0 8px 24px rgba(38, 73, 105, 0.08);
+        }
+
+        .course-label {
+            margin-bottom: 15px;
+
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+
+            color: #176b8f;
+        }
+
+        .course-hero h1 {
+            margin: 0 0 18px 0;
+
+            font-size: clamp(2.2rem, 5vw, 3.7rem);
+            line-height: 1.12;
+            font-weight: 650;
+
+            color: #17324d;
+        }
+
+        .course-subtitle {
+            max-width: 780px;
+            margin: 0 0 28px 0;
+
+            font-size: 1.15rem;
+            line-height: 1.6;
+
+            color: #49647b;
+        }
+
+        /* =========================================================
+           PROFESSORES
+           ========================================================= */
+
+        .professors {
+            margin-bottom: 25px;
+
+            font-size: 1rem;
+            line-height: 1.6;
+
+            color: #36566e;
+        }
+
+        .professors strong {
+            color: #17324d;
+        }
+
+        /* =========================================================
+           INFORMAÇÕES RÁPIDAS
+           ========================================================= */
+
+        .course-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .course-info span {
+            padding: 8px 16px;
+
+            border: 1px solid #9dbfd2;
+            border-radius: 999px;
+
+            font-size: 0.9rem;
+
+            color: #245873;
+            background: #f5fafc;
+        }
+
+        /* =========================================================
+           MATERIAL DA DISCIPLINA
+           ========================================================= */
+
+        .section-title {
+            margin-bottom: 8px;
+
+            font-size: 1.9rem;
+            color: #17324d;
+        }
+
+        .section-intro {
+            max-width: 760px;
+            margin-bottom: 32px;
+
+            line-height: 1.65;
+            color: #526b7f;
+        }
+
+        .material-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        /* =========================================================
+           CARTÕES
+           ========================================================= */
+
+        .material-card {
+            display: block;
+
+            padding: 28px;
+            min-height: 145px;
+
+            text-decoration: none;
+
+            background: #ffffff;
+
+            border: 1px solid #cedce6;
+            border-radius: 14px;
+
+            box-shadow: 0 6px 18px rgba(38, 73, 105, 0.06);
+
+            transition:
+                transform 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease,
+                background 0.2s ease;
+        }
+
+        .material-card:hover {
+            transform: translateY(-4px);
+
+            border-color: #5ca6c7;
+            background: #f7fbfd;
+
+            box-shadow: 0 10px 24px rgba(38, 73, 105, 0.12);
+        }
+
+        .material-card h3 {
+            margin: 0 0 10px 0;
+
+            font-size: 1.3rem;
+            color: #1a4f6d;
+        }
+
+        .material-card p {
+            margin: 0;
+
+            font-size: 0.96rem;
+            line-height: 1.6;
+
+            color: #5d7080;
+        }
+
+        .material-card .arrow {
+            display: inline-block;
+
+            margin-top: 18px;
+
+            font-size: 1.1rem;
+            font-weight: 600;
+
+            color: #1782ad;
+        }
+
+        /* =========================================================
+           VOLTAR
+           ========================================================= */
+
+        .back-link {
+            margin-top: 55px;
+            padding-top: 25px;
+
+            border-top: 1px solid #c9d7e1;
+        }
+
+        .back-link a {
+            font-weight: 600;
+            text-decoration: none;
+
+            color: #176b8f;
+        }
+
+        .back-link a:hover {
+            color: #0e4f6b;
+            text-decoration: underline;
+        }
+
+        /* =========================================================
+           RESPONSIVIDADE
+           ========================================================= */
+
+        @media (max-width: 700px) {
+
+            .course-page {
+                padding: 30px 18px 60px;
+            }
+
+            .course-hero {
+                padding: 28px 22px;
+            }
+
+            .material-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<main class="course-page">
+
+
+    <!-- =========================================================
+         CABEÇALHO DA DISCIPLINA
+         ========================================================= -->
+
+    <header class="course-hero">
+
+        <div class="course-label">
+            UFPE · Matemática
+        </div>
+
+        <h1>
+            Produção de Conteúdo Digital<br>
+            para o Ensino de Matemática
+        </h1>
+
+        <p class="course-subtitle">
+            Produção e planejamento de materiais educacionais digitais,
+            comunicação visual, divulgação matemática, GeoGebra e
+            recursos multimídia para o ensino de Matemática.
+        </p>
+
+        <div class="professors">
+            <strong>Professores:</strong>
+            César Castilho e Airton Castro
+        </div>
+
+        <div class="course-info">
+
+            <span>60 horas</span>
+
+            <span>Disciplina Eletiva</span>
+
+            <span>Presencial</span>
+
+            <span>Atividades práticas em laboratório</span>
+
+            <span>Sem pré-requisitos</span>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         MATERIAL DA DISCIPLINA
+         ========================================================= -->
+
+    <section>
+
+        <h2 class="section-title">
+            Material da Disciplina
+        </h2>
+
+        <p class="section-intro">
+            Nesta página serão disponibilizados os documentos,
+            materiais didáticos e atividades desenvolvidos ao longo
+            da disciplina.
+        </p>
+
+
+        <div class="material-grid">
+
+
+            <!-- EMENTA -->
+
+            <a class="material-card"
+               href="ementa.pdf"
+               target="_blank">
+
+                <h3>
+                    Ementa
+                </h3>
+
+                <p>
+                    Apresentação da disciplina, objetivos, conteúdo
+                    programático, metodologia, avaliação e bibliografia.
+                </p>
+
+                <span class="arrow">
+                    Abrir ementa →
+                </span>
+
+            </a>
+
+
+            <!--
+            =========================================================
+            FUTUROS MATERIAIS
+
+            Quando quiser acrescentar novos materiais, você poderá
+            copiar um cartão como este.
+
+            Por exemplo:
+
+            <a class="material-card"
+               href="/ensino/Conteudos_Digitais/atividades/">
+
+                <h3>Atividades</h3>
+
+                <p>
+                    Atividades práticas desenvolvidas durante a disciplina.
+                </p>
+
+                <span class="arrow">
+                    Acessar →
+                </span>
+
+            </a>
+
+            =========================================================
+            -->
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         VOLTAR
+         ========================================================= -->
+
+    <div class="back-link">
+
+        <a href="/ensino/">
+            ← Voltar para Ensino
+        </a>
+
+    </div>
+
+
+</main>
+
+</body>
+
+</html>
+```
