@@ -23,7 +23,9 @@
             padding: 60px 30px 80px;
         }
 
-        /* Cabeçalho */
+        /* =========================================================
+           CABEÇALHO
+           ========================================================= */
 
         .teaching-hero {
             padding: 38px;
@@ -67,7 +69,9 @@
             color: #49647b;
         }
 
-        /* Seção de disciplinas */
+        /* =========================================================
+           SEÇÃO DE DISCIPLINAS
+           ========================================================= */
 
         .section-title {
             margin-bottom: 8px;
@@ -90,13 +94,16 @@
             gap: 22px;
         }
 
-        /* Cartões */
+        /* =========================================================
+           CARTÕES
+           ========================================================= */
 
         .course-card {
-            display: block;
+            display: flex;
+            flex-direction: column;
 
             padding: 30px;
-            min-height: 190px;
+            min-height: 260px;
 
             text-decoration: none;
 
@@ -124,6 +131,8 @@
         }
 
         .course-period {
+            align-self: flex-start;
+
             display: inline-block;
 
             margin-bottom: 18px;
@@ -161,21 +170,26 @@
             margin-top: 20px;
 
             font-size: 0.9rem;
+            line-height: 1.5;
+
             color: #708493;
         }
 
         .course-arrow {
             display: inline-block;
 
-            margin-top: 20px;
+            margin-top: auto;
+            padding-top: 22px;
 
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             font-weight: 600;
 
             color: #1782ad;
         }
 
-        /* Voltar */
+        /* =========================================================
+           VOLTAR
+           ========================================================= */
 
         .teaching-back {
             margin-top: 55px;
@@ -196,7 +210,9 @@
             text-decoration: underline;
         }
 
-        /* Responsivo */
+        /* =========================================================
+           RESPONSIVIDADE
+           ========================================================= */
 
         @media (max-width: 700px) {
 
@@ -212,6 +228,10 @@
                 grid-template-columns: 1fr;
             }
 
+            .course-card {
+                min-height: auto;
+            }
+
         }
 
     </style>
@@ -223,7 +243,10 @@
 
 <main class="teaching-page">
 
-    <!-- Cabeçalho -->
+
+    <!-- =========================================================
+         CABEÇALHO
+         ========================================================= -->
 
     <header class="teaching-hero">
 
@@ -244,7 +267,9 @@
     </header>
 
 
-    <!-- Disciplinas -->
+    <!-- =========================================================
+         DISCIPLINAS
+         ========================================================= -->
 
     <section>
 
@@ -253,14 +278,17 @@
         </h2>
 
         <p class="section-intro">
-            Selecione uma disciplina para acessar o material
-            correspondente.
+            Selecione uma disciplina para acessar os materiais,
+            atividades e informações correspondentes.
         </p>
 
 
         <div class="course-grid">
 
-            <!-- EDO -->
+
+            <!-- =====================================================
+                 EDO
+                 ===================================================== -->
 
             <a class="course-card"
                href="/ensino/EDO/">
@@ -290,12 +318,48 @@
 
             </a>
 
+
+            <!-- =====================================================
+                 PRODUÇÃO DE CONTEÚDO DIGITAL
+                 ===================================================== -->
+
+            <a class="course-card"
+               href="/ensino/Conteudos_Digitais/">
+
+                <span class="course-period">
+                    2026.2
+                </span>
+
+                <h2>
+                    Produção de Conteúdo Digital para o Ensino de Matemática
+                </h2>
+
+                <p>
+                    Comunicação visual, divulgação matemática,
+                    produção de materiais educacionais digitais,
+                    GeoGebra, animações, infográficos e vídeos
+                    voltados ao ensino de Matemática.
+                </p>
+
+                <div class="course-meta">
+                    Licenciatura em Matemática · 60 h
+                </div>
+
+                <span class="course-arrow">
+                    Acessar disciplina →
+                </span>
+
+            </a>
+
+
         </div>
 
     </section>
 
 
-    <!-- Voltar -->
+    <!-- =========================================================
+         VOLTAR
+         ========================================================= -->
 
     <div class="teaching-back">
 
@@ -304,6 +368,7 @@
         </a>
 
     </div>
+
 
 </main>
 
