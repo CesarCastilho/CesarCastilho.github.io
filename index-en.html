@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Página acadêmica de César Castilho, Professor Associado de Matemática da Universidade Federal de Pernambuco.">
+          content="Academic website of César Castilho, Associate Professor of Mathematics at the Federal University of Pernambuco, Brazil.">
 
-    <title>César Castilho | Matemática Aplicada</title>
+    <title>César Castilho | Applied Mathematics</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -19,32 +19,32 @@
 <body>
 
     <!-- =====================================================
-         CABEÇALHO
+         HEADER
          ===================================================== -->
 
     <header class="site-header">
 
         <div class="header-inner">
 
-            <a href="#inicio" class="site-name">
+            <a href="#home" class="site-name">
                 César Castilho
             </a>
 
-            <nav class="top-nav" aria-label="Navegação principal">
-                <a href="#sobre">Sobre</a>
-                <a href="#pesquisa">Pesquisa</a>
-                <a href="#publicacoes">Publicações</a>
-                <a href="ensino/">Ensino</a>
+            <nav class="top-nav" aria-label="Main navigation">
+                <a href="#about">About</a>
+                <a href="#research">Research</a>
+                <a href="#publications">Publications</a>
+                <a href="ensino/">Teaching</a>
                 <a href="http://lattes.cnpq.br/7766890976448108"
                    target="_blank"
-                   rel="noopener noreferrer">Currículo</a>
-                <a href="#contato">Contato</a>
+                   rel="noopener noreferrer">CV</a>
+                <a href="#contact">Contact</a>
             </nav>
 
             <div class="language-switch">
-                <span class="current-language">PT</span>
+                <a href="index.html" title="Versão em português">PT</a>
                 <span class="language-separator">|</span>
-                <a href="index-en.html" title="English version">EN</a>
+                <span class="current-language">EN</span>
             </div>
 
         </div>
@@ -55,10 +55,10 @@
     <main>
 
         <!-- =================================================
-             APRESENTAÇÃO
+             INTRODUCTION
              ================================================= -->
 
-        <section id="inicio" class="hero">
+        <section id="home" class="hero">
 
             <div class="hero-content">
 
@@ -100,7 +100,7 @@
                 <div class="hero-text">
 
                     <p class="intro-label">
-                        Universidade Federal de Pernambuco
+                        Federal University of Pernambuco
                     </p>
 
                     <h1>
@@ -108,29 +108,27 @@
                     </h1>
 
                     <p class="academic-title">
-                        Professor Associado de Matemática
+                        Associate Professor of Mathematics
                     </p>
 
                     <p class="research-fields">
-                        Epidemiologia Matemática
+                        Mathematical Epidemiology
                         <span>•</span>
-                        Sistemas Dinâmicos
+                        Dynamical Systems
                         <span>•</span>
-                        Matemática Aplicada
+                        Applied Mathematics
                     </p>
 
                     <p class="hero-description">
-                        Pesquisa em modelagem matemática de sistemas
-                        biológicos, dinâmica de doenças infecciosas e
-                        sistemas dinâmicos.
+                        Research in mathematical modeling of biological
+                        systems, infectious disease dynamics, and
+                        dynamical systems.
                     </p>
 
                 </div>
 
             </div>
 
-
-            <!-- Animação epidemiológica -->
 
             <div class="animation-box">
                 <canvas id="epidemicCanvas"></canvas>
@@ -140,86 +138,92 @@
 
 
         <!-- =================================================
-             SOBRE
+             ABOUT
              ================================================= -->
 
-        <section id="sobre" class="content-section">
+        <section id="about" class="content-section">
 
-            <p class="section-label">Perfil acadêmico</p>
+            <p class="section-label">Academic profile</p>
 
-            <h2>Sobre</h2>
+            <h2>About</h2>
 
             <div class="section-line"></div>
 
             <p>
-                Sou César Castilho, Professor Associado do Departamento
-                de Matemática da Universidade Federal de Pernambuco
-                (UFPE).
+                I am César Castilho, Associate Professor at the
+                Department of Mathematics of the Federal University
+                of Pernambuco (UFPE), Brazil.
             </p>
 
             <p>
-                Minha atividade acadêmica envolve pesquisa e ensino em
-                matemática aplicada, com interesse especial em
-                epidemiologia matemática, sistemas dinâmicos, dinâmica
-                populacional e modelagem matemática de sistemas
-                biológicos e ecológicos.
+                My academic work involves research and teaching in
+                applied mathematics, with particular interests in
+                mathematical epidemiology, dynamical systems,
+                population dynamics, and mathematical modeling of
+                biological and ecological systems.
             </p>
 
             <p>
-                Também atuo na formação de estudantes de graduação e
-                pós-graduação, particularmente nas áreas de equações
-                diferenciais, modelagem matemática e métodos
-                computacionais.
+                I am also involved in undergraduate and graduate
+                education, particularly in differential equations,
+                mathematical modeling, and computational methods.
             </p>
 
         </section>
 
 
         <!-- =================================================
-             PESQUISA
+             RESEARCH
              ================================================= -->
 
-        <section id="pesquisa" class="content-section">
+        <section id="research" class="content-section">
 
-            <p class="section-label">Áreas de atuação</p>
+            <p class="section-label">Research areas</p>
 
-            <h2>Pesquisa</h2>
+            <h2>Research</h2>
 
             <div class="section-line"></div>
 
             <p>
-                Minha pesquisa atual concentra-se principalmente em
-                modelos matemáticos para a dinâmica de doenças
-                infecciosas, persistência de arboviroses, heterogeneidade
-                espacial e sistemas não lineares.
+                My current research focuses primarily on mathematical
+                models for infectious disease dynamics, arbovirus
+                persistence, spatial heterogeneity, and nonlinear
+                dynamical systems.
             </p>
 
             <div class="research-grid">
 
                 <div class="research-card">
                     <i class="fa-solid fa-virus"></i>
-                    <h3>Epidemiologia Matemática</h3>
+
+                    <h3>Mathematical Epidemiology</h3>
+
                     <p>
-                        Modelagem da transmissão, persistência e dinâmica
-                        de doenças infecciosas.
+                        Mathematical modeling of transmission,
+                        persistence, and dynamics of infectious
+                        diseases.
                     </p>
                 </div>
 
                 <div class="research-card">
                     <i class="fa-solid fa-chart-line"></i>
-                    <h3>Sistemas Dinâmicos</h3>
+
+                    <h3>Dynamical Systems</h3>
+
                     <p>
-                        Análise qualitativa de modelos não lineares e
-                        aplicações a sistemas biológicos.
+                        Qualitative analysis of nonlinear models and
+                        applications to biological systems.
                     </p>
                 </div>
 
                 <div class="research-card">
                     <i class="fa-solid fa-network-wired"></i>
-                    <h3>Modelagem Matemática</h3>
+
+                    <h3>Mathematical Modeling</h3>
+
                     <p>
-                        Modelos determinísticos, estocásticos e
-                        computacionais aplicados a sistemas complexos.
+                        Deterministic, stochastic, and computational
+                        models applied to complex systems.
                     </p>
                 </div>
 
@@ -229,27 +233,27 @@
 
 
         <!-- =================================================
-             PUBLICAÇÕES
+             PUBLICATIONS
              ================================================= -->
 
-        <section id="publicacoes" class="content-section">
+        <section id="publications" class="content-section">
 
-            <p class="section-label">Produção científica</p>
+            <p class="section-label">Scientific output</p>
 
-            <h2>Publicações</h2>
+            <h2>Publications</h2>
 
             <div class="section-line"></div>
 
             <p>
-                Artigos, trabalhos de pesquisa e outras produções
-                acadêmicas podem ser consultados na página de
-                publicações e no meu perfil do Google Scholar.
+                Articles, research papers, and other academic
+                publications are available on the publications page
+                and on my Google Scholar profile.
             </p>
 
             <div class="section-links">
 
                 <a href="publicacoes/" class="text-link">
-                    Ver publicações
+                    Publications page
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
 
@@ -267,27 +271,28 @@
 
 
         <!-- =================================================
-             ENSINO
+             TEACHING
              ================================================= -->
 
-        <section id="ensino" class="content-section">
+        <section id="teaching" class="content-section">
 
-            <p class="section-label">Graduação e pós-graduação</p>
+            <p class="section-label">Undergraduate and graduate education</p>
 
-            <h2>Ensino</h2>
+            <h2>Teaching</h2>
 
             <div class="section-line"></div>
 
             <p>
-                Materiais didáticos, notas de aula, listas de exercícios
-                e informações sobre disciplinas estão disponíveis na
-                área de ensino.
+                Course materials, lecture notes, exercises, and
+                information about my courses are available in the
+                teaching section. These pages are currently in
+                Portuguese.
             </p>
 
             <div class="section-links">
 
                 <a href="ensino/" class="text-link">
-                    Acessar área de ensino
+                    Teaching section
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
 
@@ -297,20 +302,20 @@
 
 
         <!-- =================================================
-             CONTATO
+             CONTACT
              ================================================= -->
 
-        <section id="contato" class="content-section contact-section">
+        <section id="contact" class="content-section contact-section">
 
-            <p class="section-label">Contato</p>
+            <p class="section-label">Contact</p>
 
-            <h2>Departamento de Matemática</h2>
+            <h2>Department of Mathematics</h2>
 
             <div class="section-line"></div>
 
             <p>
-                Universidade Federal de Pernambuco — UFPE<br>
-                Recife, Pernambuco, Brasil
+                Federal University of Pernambuco — UFPE<br>
+                Recife, Pernambuco, Brazil
             </p>
 
             <p>
@@ -326,13 +331,13 @@
 
 
     <!-- =====================================================
-         RODAPÉ
+         FOOTER
          ===================================================== -->
 
     <footer class="site-footer">
 
         <p>
-            © César Castilho · Universidade Federal de Pernambuco
+            © César Castilho · Federal University of Pernambuco
         </p>
 
     </footer>

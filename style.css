@@ -1,355 +1,898 @@
+
 /* ===========================================================
    César Castilho
    Personal Academic Website
+   Light / Responsive Layout
    =========================================================== */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
-}
 
-html{
-    scroll-behavior:smooth;
-}
 
 /* ===========================================================
-   COLORS
+   RESET E VARIÁVEIS
    =========================================================== */
 
-body{
+:root {
+    --background: #f7f9fc;
+    --surface: #ffffff;
+    --surface-soft: #f0f5f9;
 
-    background:#0f172a;
+    --text: #263746;
+    --text-soft: #647789;
+    --heading: #183247;
 
-    color:#CBD5E1;
+    --primary: #3f789c;
+    --primary-dark: #285d7d;
+    --primary-light: #dcebf4;
 
+    --border: #dce5eb;
+
+    --max-width: 1120px;
+
+    --shadow-soft:
+        0 8px 30px rgba(31, 55, 72, 0.06);
 }
 
-.container{
-    display:flex;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+
+body {
+    font-family:
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    background: var(--background);
+    color: var(--text);
+
+    line-height: 1.7;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+a {
+    color: inherit;
+}
+
 
 /* ===========================================================
-   SIDEBAR
+   CABEÇALHO
    =========================================================== */
 
-.sidebar{
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 
-    width:260px;
-    height:100vh;
+    background: rgba(255, 255, 255, 0.94);
+    border-bottom: 1px solid var(--border);
 
-    position:fixed;
-
-    left:0;
-    top:0;
-
-    background:#1e293b;
-
-    padding:40px 20px;
-
-    text-align:center;
-
+    backdrop-filter: blur(10px);
 }
 
-.avatar{
 
-    width:115px;
-    height:115px;
+.header-inner {
+    max-width: var(--max-width);
+    min-height: 72px;
 
-    border-radius:50%;
+    margin: 0 auto;
+    padding: 0 28px;
 
-    border:3px solid #38BDF8;
-
-    object-fit:cover;
-
+    display: flex;
+    align-items: center;
+    gap: 28px;
 }
 
-.sidebar h2{
 
-    margin-top:15px;
+.site-name {
+    margin-right: auto;
 
-    color:#FFFFFF;
+    color: var(--heading);
 
-    font-size:1.45rem;
+    font-size: 1.08rem;
+    font-weight: 650;
 
-    font-weight:600;
-
+    text-decoration: none;
+    white-space: nowrap;
 }
 
-.social-icons{
 
-    margin-top:18px;
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:10px;
-
+.top-nav {
+    display: flex;
+    align-items: center;
+    gap: 23px;
 }
 
-.social-icons a{
 
-    width:36px;
-    height:36px;
+.top-nav a {
+    color: var(--text-soft);
 
-    display:flex;
+    font-size: 0.92rem;
+    font-weight: 500;
 
-    align-items:center;
+    text-decoration: none;
 
-    justify-content:center;
-
-    text-decoration:none;
-
-    border-radius:50%;
-
-    color:white;
-
-    background:rgba(255,255,255,.08);
-
-    transition:.3s;
-
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
-.social-icons a:hover{
 
-    background:#38BDF8;
-
-    color:#0F172A;
-
+.top-nav a:hover {
+    color: var(--primary-dark);
 }
+
+
+.language-switch {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    padding-left: 18px;
+
+    border-left: 1px solid var(--border);
+
+    font-size: 0.82rem;
+}
+
+
+.language-switch a {
+    color: var(--primary-dark);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+.current-language {
+    color: var(--heading);
+    font-weight: 700;
+}
+
+
+.language-separator {
+    color: #a8b5bf;
+}
+
 
 /* ===========================================================
-   MENU
+   CONTEÚDO PRINCIPAL
    =========================================================== */
 
-.menu{
-
-    margin-top:35px;
-
+main {
+    width: 100%;
 }
 
-.menu ul{
-
-    list-style:none;
-
-}
-
-.menu li{
-
-    margin-bottom:8px;
-
-}
-
-.menu a{
-
-    color:#CBD5E1;
-
-    text-decoration:none;
-
-    display:flex;
-
-    align-items:center;
-
-    gap:14px;
-
-    padding:12px 15px;
-
-    border-radius:5px;
-
-    transition:.25s;
-
-}
-
-.menu a:hover,
-.menu a.active{
-
-    color:white;
-
-    background:rgba(56,189,248,.15);
-
-}
 
 /* ===========================================================
-   MAIN
+   HERO / APRESENTAÇÃO
    =========================================================== */
 
-.main-content{
+.hero {
+    max-width: var(--max-width);
 
-    margin-left:260px;
-
-    width:calc(100% - 260px);
-
-    padding:60px 80px;
-
+    margin: 0 auto;
+    padding: 76px 28px 45px;
 }
+
+
+.hero-content {
+    display: grid;
+
+    grid-template-columns: 170px 1fr;
+
+    align-items: center;
+
+    gap: 52px;
+}
+
+
+.profile-column {
+    text-align: center;
+}
+
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+
+    display: block;
+
+    margin: 0 auto;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 5px solid var(--surface);
+
+    box-shadow:
+        0 0 0 1px var(--border),
+        0 12px 30px rgba(36, 66, 87, 0.12);
+}
+
 
 /* ===========================================================
-   HERO
+   ÍCONES SOCIAIS
    =========================================================== */
 
-.hero-section{
+.social-links {
+    margin-top: 18px;
 
-    display:flex;
+    display: flex;
+    justify-content: center;
 
-    flex-direction:column;
-
-    margin-bottom:55px;
-
+    gap: 10px;
 }
 
-.animation-box{
 
-    width:100%;
+.social-links a {
+    width: 36px;
+    height: 36px;
 
-    height:180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    margin-bottom:30px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
 
-    border-radius:14px;
+    background: var(--surface);
 
-    overflow:hidden;
+    color: var(--primary-dark);
 
-    background:rgba(15,23,42,.35);
+    text-decoration: none;
 
-    border:1px solid rgba(125,211,252,.12);
-
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
 }
 
-#epidemicCanvas{
 
-    width:100%;
-    height:100%;
+.social-links a:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #ffffff;
 
-    display:block;
-
+    transform: translateY(-2px);
 }
+
 
 /* ===========================================================
-   TITLE
+   TEXTO DE APRESENTAÇÃO
    =========================================================== */
 
-.hero-title{
+.intro-label {
+    margin-bottom: 7px;
 
-    font-size:2rem;
+    color: var(--primary);
 
-    font-weight:300;
+    font-size: 0.86rem;
+    font-weight: 650;
 
-    line-height:1.35;
-
-    color:#CBD5E1;
-
-    margin-bottom:10px;
-
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
 }
 
-.subtitle{
 
-    font-size:1rem;
+.hero-text h1 {
+    color: var(--heading);
 
-    color:#94A3B8;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 650;
 
-    letter-spacing:.4px;
+    line-height: 1.08;
 
+    letter-spacing: -0.035em;
 }
+
+
+.academic-title {
+    margin-top: 10px;
+
+    color: var(--text);
+
+    font-size: 1.28rem;
+    font-weight: 400;
+}
+
+
+.research-fields {
+    margin-top: 19px;
+
+    color: var(--primary-dark);
+
+    font-size: 1rem;
+    font-weight: 550;
+}
+
+
+.research-fields span {
+    margin: 0 7px;
+
+    color: #9aabb7;
+}
+
+
+.hero-description {
+    max-width: 700px;
+
+    margin-top: 17px;
+
+    color: var(--text-soft);
+
+    font-size: 1.04rem;
+    line-height: 1.7;
+}
+
 
 /* ===========================================================
-   CONTENT
+   ANIMAÇÃO EPIDEMIOLÓGICA
    =========================================================== */
 
-.content-section{
+.animation-box {
+    width: 100%;
+    height: 155px;
 
-    margin-top:45px;
+    margin-top: 48px;
 
-    max-width:1000px;
+    overflow: hidden;
 
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f9fcfe,
+            #edf5f9
+        );
+
+    box-shadow: var(--shadow-soft);
 }
 
-.content-section h2{
 
-    color:#F1F5F9;
+#epidemicCanvas {
+    width: 100%;
+    height: 100%;
 
-    font-size:2rem;
-
-    font-weight:500;
-
-    margin-bottom:10px;
-
+    display: block;
 }
 
-.line-dec{
-
-    width:60px;
-
-    height:2px;
-
-    background:#38BDF8;
-
-    margin-bottom:25px;
-
-}
-
-.content-section p{
-
-    color:#CBD5E1;
-
-    font-size:1.1rem;
-
-    line-height:1.7;
-
-    margin-bottom:18px;
-
-}
-
-.content-section a{
-
-    color:#7DD3FC;
-
-    text-decoration:none;
-
-}
-
-.content-section a:hover{
-
-    color:white;
-
-}
 
 /* ===========================================================
-   MOBILE
+   SEÇÕES
    =========================================================== */
 
-@media (max-width:850px){
+.content-section {
+    max-width: var(--max-width);
 
-.sidebar{
+    margin: 0 auto;
+    padding: 70px 28px;
 
-    position:relative;
+    border-top: 1px solid var(--border);
+}
 
-    width:100%;
 
-    height:auto;
+.section-label {
+    margin-bottom: 3px;
+
+    color: var(--primary);
+
+    font-size: 0.78rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.11em;
+}
+
+
+.content-section h2 {
+    color: var(--heading);
+
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: 600;
+
+    line-height: 1.25;
+}
+
+
+.section-line {
+    width: 45px;
+    height: 3px;
+
+    margin: 14px 0 27px;
+
+    border-radius: 5px;
+
+    background: var(--primary);
+}
+
+
+.content-section > p:not(.section-label) {
+    max-width: 850px;
+
+    margin-bottom: 17px;
+
+    color: var(--text);
+
+    font-size: 1.03rem;
+    line-height: 1.8;
+}
+
+
+/* ===========================================================
+   CARDS DE PESQUISA
+   =========================================================== */
+
+.research-grid {
+    margin-top: 35px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+.research-card {
+    padding: 27px 25px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    box-shadow: var(--shadow-soft);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.research-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 32px rgba(31, 55, 72, 0.09);
+}
+
+
+.research-card > i {
+    margin-bottom: 18px;
+
+    color: var(--primary);
+
+    font-size: 1.45rem;
+}
+
+
+.research-card h3 {
+    margin-bottom: 10px;
+
+    color: var(--heading);
+
+    font-size: 1.05rem;
+    font-weight: 650;
+}
+
+
+.research-card p {
+    color: var(--text-soft);
+
+    font-size: 0.94rem;
+    line-height: 1.65;
+}
+
+
+/* ===========================================================
+   LINKS DAS SEÇÕES
+   =========================================================== */
+
+.section-links {
+    margin-top: 28px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 13px 25px;
+}
+
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--primary-dark);
+
+    font-size: 0.95rem;
+    font-weight: 650;
+
+    text-decoration: none;
+}
+
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+
+.text-link i {
+    font-size: 0.78rem;
+}
+
+
+/* ===========================================================
+   CONTATO
+   =========================================================== */
+
+.contact-section {
+    padding-bottom: 80px;
+}
+
+
+.email-link {
+    color: var(--primary-dark);
+
+    font-weight: 550;
+
+    text-decoration: none;
+}
+
+
+.email-link:hover {
+    text-decoration: underline;
+}
+
+
+/* ===========================================================
+   RODAPÉ
+   =========================================================== */
+
+.site-footer {
+    padding: 27px;
+
+    border-top: 1px solid var(--border);
+
+    background: var(--surface);
+
+    text-align: center;
+}
+
+
+.site-footer p {
+    color: var(--text-soft);
+
+    font-size: 0.82rem;
+}
+
+
+/* ===========================================================
+   TABLETS
+   =========================================================== */
+
+@media (max-width: 900px) {
+
+    .header-inner {
+        min-height: auto;
+
+        padding-top: 16px;
+        padding-bottom: 16px;
+
+        flex-wrap: wrap;
+    }
+
+
+    .site-name {
+        flex: 1;
+    }
+
+
+    .language-switch {
+        padding-left: 15px;
+    }
+
+
+    .top-nav {
+        width: 100%;
+
+        order: 3;
+
+        padding-top: 12px;
+
+        border-top: 1px solid var(--border);
+
+        justify-content: center;
+        flex-wrap: wrap;
+
+        gap: 9px 20px;
+    }
+
+
+    .hero {
+        padding-top: 55px;
+    }
+
+
+    .hero-content {
+        grid-template-columns: 140px 1fr;
+
+        gap: 35px;
+    }
+
+
+    .profile-photo {
+        width: 125px;
+        height: 125px;
+    }
+
+
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
 
 }
 
-.main-content{
 
-    margin-left:0;
+/* ===========================================================
+   CELULAR
+   =========================================================== */
 
-    width:100%;
+@media (max-width: 650px) {
 
-    padding:40px 25px;
+    html {
+        scroll-padding-top: 130px;
+    }
+
+
+    body {
+        background: #fafcfd;
+    }
+
+
+    /* ---------- cabeçalho ---------- */
+
+    .site-header {
+        position: relative;
+
+        background: var(--surface);
+    }
+
+
+    .header-inner {
+        padding: 14px 20px;
+
+        gap: 12px;
+    }
+
+
+    .site-name {
+        font-size: 1rem;
+    }
+
+
+    .language-switch {
+        padding-left: 12px;
+
+        font-size: 0.78rem;
+    }
+
+
+    .top-nav {
+        justify-content: flex-start;
+
+        flex-wrap: nowrap;
+
+        overflow-x: auto;
+
+        padding: 11px 0 2px;
+
+        gap: 20px;
+
+        scrollbar-width: none;
+    }
+
+
+    .top-nav::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .top-nav a {
+        flex: 0 0 auto;
+
+        font-size: 0.84rem;
+    }
+
+
+    /* ---------- apresentação ---------- */
+
+    .hero {
+        padding:
+            42px
+            20px
+            30px;
+    }
+
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+
+        gap: 27px;
+
+        text-align: center;
+    }
+
+
+    .profile-photo {
+        width: 112px;
+        height: 112px;
+    }
+
+
+    .social-links {
+        margin-top: 14px;
+    }
+
+
+    .intro-label {
+        font-size: 0.72rem;
+
+        letter-spacing: 0.07em;
+    }
+
+
+    .hero-text h1 {
+        font-size: 2.45rem;
+    }
+
+
+    .academic-title {
+        margin-top: 7px;
+
+        font-size: 1.1rem;
+    }
+
+
+    .research-fields {
+        max-width: 320px;
+
+        margin: 18px auto 0;
+
+        font-size: 0.92rem;
+        line-height: 1.8;
+    }
+
+
+    .research-fields span {
+        margin: 0 4px;
+    }
+
+
+    .hero-description {
+        max-width: 430px;
+
+        margin: 14px auto 0;
+
+        font-size: 0.95rem;
+        line-height: 1.65;
+    }
+
+
+    /* ---------- animação ---------- */
+
+    .animation-box {
+        height: 115px;
+
+        margin-top: 34px;
+
+        border-radius: 10px;
+    }
+
+
+    /* ---------- seções ---------- */
+
+    .content-section {
+        padding:
+            52px
+            20px;
+    }
+
+
+    .section-label {
+        font-size: 0.72rem;
+    }
+
+
+    .content-section h2 {
+        font-size: 1.65rem;
+    }
+
+
+    .section-line {
+        margin:
+            11px
+            0
+            22px;
+    }
+
+
+    .content-section > p:not(.section-label) {
+        font-size: 0.98rem;
+
+        line-height: 1.75;
+    }
+
+
+    /* ---------- pesquisa ---------- */
+
+    .research-grid {
+        margin-top: 28px;
+
+        gap: 13px;
+    }
+
+
+    .research-card {
+        padding: 23px 21px;
+    }
+
+
+    /* ---------- links ---------- */
+
+    .section-links {
+        flex-direction: column;
+
+        gap: 13px;
+    }
+
+
+    /* ---------- rodapé ---------- */
+
+    .site-footer {
+        padding:
+            24px
+            20px;
+    }
 
 }
 
-.hero-title{
 
-    font-size:1.6rem;
+/* ===========================================================
+   TELAS MUITO PEQUENAS
+   =========================================================== */
+
+@media (max-width: 390px) {
+
+    .hero-text h1 {
+        font-size: 2.15rem;
+    }
+
+
+    .research-fields {
+        font-size: 0.86rem;
+    }
+
+
+    .hero-description {
+        font-size: 0.91rem;
+    }
 
 }
-
-.animation-box{
-
-    height:150px;
-
-}
-} 
